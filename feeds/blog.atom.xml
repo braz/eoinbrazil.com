@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Insights</title><link href="http://eoinbrazil.com/" rel="alternate"></link><link href="http://eoinbrazil.com/feeds/blog.atom.xml" rel="self"></link><id>http://eoinbrazil.com/</id><updated>2013-10-08T00:00:00+01:00</updated><entry><title>Introduction to Machine Learning with R</title><link href="http://eoinbrazil.com/introtomlwithr.html" rel="alternate"></link><updated>2013-10-08T00:00:00+01:00</updated><author><name>Eoin Brazil</name></author><id>tag:eoinbrazil.com,2013-10-08:introtomlwithr.html</id><summary type="html">&lt;p&gt;I had the pleasure of presenting to the &lt;a href="www.meetup.com/DublinR/"&gt;Dublin R User Group&lt;/a&gt; on machine learning. My talk source and examples are in a &lt;a href="https://github.com/braz/DublinR-ML-treesandforests/"&gt;Github repo&lt;/a&gt;. The talk was aimed at introducing machine learning to the group as I hope to follow this talk up with more intermediate&amp;nbsp;topics.&lt;/p&gt;
+&lt;h3&gt;Overview&lt;/h3&gt;
+&lt;p&gt;The techniques covered included:
+&lt;em&gt; Data transformation
+&lt;/em&gt; Model building
+&lt;em&gt; Model assessment and selection
+&lt;/em&gt; Interpreting a confusion matrix
+&lt;em&gt; Interpreting a &lt;span class="caps"&gt;ROC&lt;/span&gt; plot
+&lt;/em&gt; Approaches to handling prediction errors
+&lt;em&gt; Addressing feature selection
+&lt;/em&gt; Kaggle and data science competitions
+&lt;em&gt; A review of various &lt;span class="caps"&gt;ML&lt;/span&gt; techniques:
+    * Associate rules
+    * Decision trees
+    * Random forests
+    * k Nearest Neighbors
+    * Neural networks
+    * Support vector machines
+    * Naive bayesian
+&lt;/em&gt; OpenRefine and Rattle
+* Useful command line tools for a data&amp;nbsp;scientist&lt;/p&gt;
+&lt;h3&gt;Background&lt;/h3&gt;
+&lt;p&gt;The classification of objects into groups is a everyday task for humans and this talk helps highlight how to develop models to allow machines to do these tasks. The talk provide a quick understanding of machine learning algorithms showing how they worked, so that people would know when and how to best apply them. Machine learning and particularly feature generation for those models is seen as a &amp;#8220;black art&amp;#8221; due to the fact that domain expertise is required. The talk was aimed at showing people how R can be used in the process of selecting, assessing and creating models. It gave four datasets to show examples of exploratory data&amp;nbsp;analysis.&lt;/p&gt;</summary><category term="r"></category><category term="presentations"></category><category term="machine learning"></category><category term="rstats"></category></entry></feed>
