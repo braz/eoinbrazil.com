@@ -2,24 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Insights</title><link>http://eoinbrazil.com/</link><description></description><atom:link href="http://eoinbrazil.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 26 Oct 2013 22:20:00 +0100</lastBuildDate><item><title>About</title><link>http://eoinbrazil.com/about-me.html</link><description>&lt;p&gt;I&amp;#8217;m a technology guy with an education in &lt;span class="caps"&gt;UX&lt;/span&gt;, computer science and technology commercialisation. I&amp;#8217;ve spent several years working bringing research to commercialisation and managing consultancy projects with companies in Ireland and the&amp;nbsp;&lt;span class="caps"&gt;USA&lt;/span&gt;. &lt;/p&gt;
 &lt;p&gt;I love science, technology, craft beer, whisky and&amp;nbsp;statistics.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eoin Brazil</dc:creator><pubDate>Sat, 26 Oct 2013 22:20:00 +0100</pubDate><guid>tag:eoinbrazil.com,2013-10-26:about-me.html</guid></item><item><title>Introduction to Machine Learning with R</title><link>http://eoinbrazil.com/introtomlwithr.html</link><description>&lt;p&gt;I had the pleasure of presenting to the &lt;a href="www.meetup.com/DublinR/"&gt;Dublin R User Group&lt;/a&gt; on machine learning. My talk source and examples are in a &lt;a href="https://github.com/braz/DublinR-ML-treesandforests/"&gt;Github repo&lt;/a&gt;. The talk was aimed at introducing machine learning to the group as I hope to follow this talk up with more intermediate&amp;nbsp;topics.&lt;/p&gt;
 &lt;h3&gt;Overview&lt;/h3&gt;
-&lt;p&gt;The techniques covered included:
-&lt;em&gt; Data transformation
-&lt;/em&gt; Model building
-&lt;em&gt; Model assessment and selection
-&lt;/em&gt; Interpreting a confusion matrix
-&lt;em&gt; Interpreting a &lt;span class="caps"&gt;ROC&lt;/span&gt; plot
-&lt;/em&gt; Approaches to handling prediction errors
-&lt;em&gt; Addressing feature selection
-&lt;/em&gt; Kaggle and data science competitions
-&lt;em&gt; A review of various &lt;span class="caps"&gt;ML&lt;/span&gt; techniques:
-    * Associate rules
-    * Decision trees
-    * Random forests
-    * k Nearest Neighbors
-    * Neural networks
-    * Support vector machines
-    * Naive bayesian
-&lt;/em&gt; OpenRefine and Rattle
-* Useful command line tools for a data&amp;nbsp;scientist&lt;/p&gt;
+&lt;p&gt;The techniques covered&amp;nbsp;included:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data&amp;nbsp;transformation&lt;/li&gt;
+&lt;li&gt;Model&amp;nbsp;building&lt;/li&gt;
+&lt;li&gt;Model assessment and&amp;nbsp;selection&lt;/li&gt;
+&lt;li&gt;Interpreting a confusion&amp;nbsp;matrix&lt;/li&gt;
+&lt;li&gt;Interpreting a &lt;span class="caps"&gt;ROC&lt;/span&gt;&amp;nbsp;plot&lt;/li&gt;
+&lt;li&gt;Approaches to handling prediction&amp;nbsp;errors&lt;/li&gt;
+&lt;li&gt;Addressing feature&amp;nbsp;selection&lt;/li&gt;
+&lt;li&gt;Kaggle and data science&amp;nbsp;competitions&lt;/li&gt;
+&lt;li&gt;A review of various &lt;span class="caps"&gt;ML&lt;/span&gt; techniques:&lt;ul&gt;
+&lt;li&gt;Associate&amp;nbsp;rules&lt;/li&gt;
+&lt;li&gt;Decision&amp;nbsp;trees&lt;/li&gt;
+&lt;li&gt;Random&amp;nbsp;forests&lt;/li&gt;
+&lt;li&gt;k Nearest&amp;nbsp;Neighbors&lt;/li&gt;
+&lt;li&gt;Neural&amp;nbsp;networks&lt;/li&gt;
+&lt;li&gt;Support vector&amp;nbsp;machines&lt;/li&gt;
+&lt;li&gt;Naive&amp;nbsp;bayesian&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;OpenRefine and&amp;nbsp;Rattle&lt;/li&gt;
+&lt;li&gt;Useful command line tools for a data&amp;nbsp;scientist&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3&gt;Background&lt;/h3&gt;
 &lt;p&gt;The classification of objects into groups is a everyday task for humans and this talk helps highlight how to develop models to allow machines to do these tasks. The talk provide a quick understanding of machine learning algorithms showing how they worked, so that people would know when and how to best apply them. Machine learning and particularly feature generation for those models is seen as a &amp;#8220;black art&amp;#8221; due to the fact that domain expertise is required. The talk was aimed at showing people how R can be used in the process of selecting, assessing and creating models. It gave four datasets to show examples of exploratory data&amp;nbsp;analysis.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eoin Brazil</dc:creator><pubDate>Tue, 08 Oct 2013 00:00:00 +0100</pubDate><guid>tag:eoinbrazil.com,2013-10-08:introtomlwithr.html</guid><category>r</category><category>presentations</category><category>machine learning</category><category>rstats</category></item></channel></rss>
