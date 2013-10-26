@@ -65,6 +65,9 @@ SOCIAL = (
 	('GitHub', 'http://www.github.com/braz', '&#xe037;'),
 )
 
+FILES_TO_COPY = (
+	('extra/CNAME', 'CNAME'),
+)
 # FILES_TO_COPY = (('extras/robots.txt','robots.txt')
 # 		,('extras/404.html', '404.html')
 # 		,('extras/favicon.ico','favicon.ico')
