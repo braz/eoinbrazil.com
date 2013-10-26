@@ -1,0 +1,73 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- #
+from __future__ import unicode_literals
+
+AUTHOR = u'Eoin Brazil'
+SITENAME = u'Insights'
+SITEURL = u'http://eoinbrazil.com'
+TIMEZONE = 'Europe/Dublin'
+# THEME = 'themes/modded_syte'
+THEME = 'themes/responsive'
+PLUGIN_PATH = '/Users/eoinbrazil/Desktop/Personal/pelican-plugins/'
+PLUGINS = ['assets']
+
+# Uncomment following line if you want document-relative URLs when developing
+RELATIVE_URLS = True
+
+LOCALE = 'C' # en_IE
+DEFAULT_LANG = u'en'
+DEFAULT_DATE_FORMAT = '%a %d %b %Y'
+TYPOGRIFY = True
+
+FEED_DOMAIN = SITEURL
+FEED_ALL_RSS = 'feeds/all.rss.xml'
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+
+GOOGLE_ANALYTICS = 'UA-45182755-1'
+
+PDF_GENERATOR = False
+REVERSE_CATEGORY_ORDER = True
+DEFAULT_PAGINATION = False
+STATIC_PATHS = [
+    'CNAME',
+	'images',
+	'theme/img/avatar.png'
+]
+
+# options for syte theme
+ABOUT = u'Joining the dots from experience to product...'
+SITE_DESCRIPTION = u'Personal blog of Eoin Brazil'
+SITE_KEYWORDS = u'blog eoin braz brazil data science datascience java analysis r rstats python node ruby consulting dublin machine learning cuda gpgpu ux hci parallel'
+DISPLAY_HOME_ON_MENU = True
+TWITTER_INTEGRATION_ENABLED = False
+TWITTER_USERNAME = 'eoinbrazil'
+GITHUB_INTEGRATION_ENABLED = False
+GITHUB_USERNAME = 'braz'
+
+MINI_BIO = u"Creating ideas and insights."
+BIO = u'<strong>Eoin Brazil</strong> is a UX architect, product manager and data scientist.</br>A range of his work can be found on <a href="https://github.com/braz">Github</a>.You can find his <a href="https://slideshare.net/eoinbrazil">talks</a> online.'
+
+# Blogroll
+LINKS =  (
+	('Python Ireland', 'http://python.ie/'),
+    ('Dublin R Users', 'http://www.meetup.com/DublinR/'),
+    ('Dublin Scala Users', 'http://www.meetup.com/Dublin-Scala-users-group//'),
+    ('Dublin Ruby Users', 'http://www.meetup.com/rubyireland/'),
+    ('Dublin NodeJS Users', 'http://www.nodejsdublin.com/'),
+    ('Pub Standards', 'http://pubstandards.ie/'),
+)
+
+# Social widget
+SOCIAL = (
+	('Twitter', 'http://www.twitter.com/eoinbrazil', '&#xe086;'),
+	('LinkedIn','http://ie.linkedin.com/in/eoinbrazil', '&#xe052;'),
+	('Foursquare','https://foursquare.com/eoinbrazil', '&#xe032;'),
+	('GitHub', 'http://www.github.com/braz', '&#xe037;'),
+)
+
+# FILES_TO_COPY = (('extras/robots.txt','robots.txt')
+# 		,('extras/404.html', '404.html')
+# 		,('extras/favicon.ico','favicon.ico')
+# 		,('extras/favicon.png','favicon.png')
+# 		,('extras/apple-touch-icon.png','apple-touch-icon.png')
+# 		,('extras/google009ed94f89360f63.html','google009ed94f89360f63.html'))
