@@ -3,12 +3,12 @@
  * ======================================================================== */
 @font-face {
     font-family: 'Mono Social Icons Font';
-    src: url('/theme/fonts/MonoSocialIconsFont-1.00.eot');
-    src: url('/theme/fonts/MonoSocialIconsFont-1.00.eot?#iefix') format('embedded-opentype'),
-         url('/theme/fonts/MonoSocialIconsFont-1.00.woff') format('woff'),
-         url('/theme/fonts/MonoSocialIconsFont-1.00.ttf') format('truetype'),
-         url('/theme/fonts/MonoSocialIconsFont-1.00.svg#MonoSocialIconsFont') format('svg');
-    src: url('/theme/fonts/MonoSocialIconsFont-1.00.ttf') format('truetype');
+    src: url('/theme/fonts/MonoSocialIconsFont-1.10.eot');
+    src: url('/theme/fonts/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+         url('/theme/fonts/MonoSocialIconsFont-1.10.woff') format('woff'),
+         url('/theme/fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+         url('/theme/fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+    src: url('/theme/fonts/MonoSocialIconsFont-1.10.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

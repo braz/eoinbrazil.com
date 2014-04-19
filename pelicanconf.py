@@ -31,13 +31,14 @@ DEFAULT_PAGINATION = False
 STATIC_PATHS = [
     'CNAME',
 	'images',
+	'pdfs',
 	'theme/img/avatar.png'
 ]
 
 # options for syte theme
 ABOUT = u'Joining the dots from experience to product...'
 SITE_DESCRIPTION = u'Personal blog of Eoin Brazil'
-SITE_KEYWORDS = u'blog eoin braz brazil data science datascience java analysis r rstats python node ruby consulting dublin machine learning cuda gpgpu ux hci parallel'
+SITE_KEYWORDS = u'blog eoin braz brazil computer scientist data science datascience java analysis r rstats python node ruby consulting dublin machine learning cuda gpgpu ux hci parallel'
 DISPLAY_HOME_ON_MENU = True
 TWITTER_INTEGRATION_ENABLED = False
 TWITTER_USERNAME = 'eoinbrazil'
@@ -45,7 +46,7 @@ GITHUB_INTEGRATION_ENABLED = False
 GITHUB_USERNAME = 'braz'
 
 MINI_BIO = u"Creating ideas and insights."
-BIO = u'<strong>Eoin Brazil</strong> is a UX architect, product manager and data scientist.</br>A range of his work can be found on <a href="https://github.com/braz">Github</a>.You can find his <a href="https://slideshare.net/eoinbrazil">talks</a> online.'
+BIO = u'<strong>Eoin Brazil</strong> is a computer scientist, UX architect, product manager and data scientist.</br>A range of his work can be found on <a href="https://github.com/braz">Github</a>.You can find his <a href="https://slideshare.net/eoinbrazil">talks</a> online.'
 
 # Blogroll
 LINKS =  (
@@ -67,6 +68,9 @@ SOCIAL = (
 
 FILES_TO_COPY = (
 	('extra/CNAME', 'CNAME'),
+	('extra/msc_thesis.pdf', "pdfs/msc_thesis.pdf"),
+	('extra/phd_thesis.pdf', "pdfs/phd_thesis.pdf"),
+	('extra/pgdip_dissertation.pdf', "pdfs/pgdip_dissertation.pdf")
 )
 # FILES_TO_COPY = (('extras/robots.txt','robots.txt')
 # 		,('extras/404.html', '404.html')
