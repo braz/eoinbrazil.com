@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Insights</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="http://eoinbrazil.com/theme/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="http://eoinbrazil.com/theme/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link href="http://eoinbrazil.com/theme/css/github.css" rel="stylesheet" media="screen">
+    <link href="http://eoinbrazil.com/theme/css/github-numbers.css" rel="stylesheet" media="screen">
+    <link href="http://eoinbrazil.com/theme/css/styles.css" rel="stylesheet" media="screen">
+
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css' >
+    <link href='http://fonts.googleapis.com/css?family=Cantora+One' rel='stylesheet' type='text/css'>
+
+        <link href="http://eoinbrazil.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Insights Atom Feed" />
+        <link href="http://eoinbrazil.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Insights RSS Feed" />
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-45182755-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</head>
+<body>
+    <div class="miniBio">
+        <div class="container">
+            <a class="brand" href="/" title="Insights"><img src="http://eoinbrazil.com/theme/img/avatar.png" /></a>
+            <span class="miniBioText">Creating ideas and insights.</span>
+        </div>
+    </div>
+
+    <div class="container">
+<div class="container">
+    <div class="row">
+        <div class="span12 articleDetailHeadline">
+            <h1>Recapping SRECon <span class="caps">EU</span>&nbsp;2015</h1>
+            <h2>Site Reliablity Engineering from a European Perspective</h2>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row articleDetail">
+        <div class="span3 articleInfo light">
+<p><i class="icon-calendar"></i>&nbsp;Sun 07 Jun 2015</p>
+    <p class="articleTags">
+        <i class="icon-tag"></i>&nbsp;tags:
+            <a href="http://eoinbrazil.com/tag/sre.html">sre</a>
+            <a href="http://eoinbrazil.com/tag/presentations.html">presentations</a>
+            <a href="http://eoinbrazil.com/tag/usenix.html">usenix</a>
+            <a href="http://eoinbrazil.com/tag/review.html">review</a>
+    </p>
+        </div>
+        <div class="span6 articleDetailContent">
+            <p>I had the pleasure of helping to organise as well as attending <a href="https://www.usenix.org/conference/srecon15europe/program">SRECon Europe 2015</a>. I have pulled together a few of my notes and links of interest to recap what was an excellent conference. It was focused on operations engineering and on site reliability topics with speakers from many of the big names (e.g. Google, Facebook, Yelp, Spotify amongst&nbsp;others).</p>
+<p>My personal goals outside of my programme committee role for the conference where to find out what counterparts where doing in similar or larger organisations. My current role with MongoDB involves a lot of customer facing work and troubleshooting so I was very interested in the Postmortem and Large Scale Abstract Design workshops. I&#8217;ve presented a lot of work to the Dublin R Usergroup on machine learning so I took the opportunity to attend a similar session from Splunk. I dipped in and out of the other sessions at the conference. In the reminder of this blog post, I&#8217;ll firstly cover my notes from the three workshops then move to my notes from the various talks and finally add some useful tools / pointers from other&nbsp;attendees.</p>
+<p>As an aside, the last topic and most scary talk was on <span class="caps">EU</span> data protection, specifically the view / thinking of the European Court of Justice (<span class="caps">ECJ</span>) and the <span class="caps">US</span> Safe Harbour agreements. It was given by Simon McGarr, a well known Irish socilitor who&#8217;s been a great advocate of Digital Rights in Ireland. It painted a scary picture that the <span class="caps">EU</span> and <span class="caps">USA</span> may end with two distinct Internets before 2015 is finished once the <span class="caps">ECJ</span> makes a ruling (expected in Oct/Nov). I&#8217;m not a legal expert so instead I&#8217;ll refer you to a <a href="http://eulawanalysis.blogspot.ie/2015/03/does-facebook-and-usa-violate-eu-data.html">recent summary</a> by Simon&nbsp;himself.</p>
+<h3>Workshops</h3>
+<h4>Postmortems</h4>
+<p>I think I can safely say this session changed my thinking around Postmortems. I cannot recommend the work of Etsy and John Allspaw highly enough in this regard. He was fantastic and brought us on a journey of understanding helping us to evolve a more nuanced and mature sense of investigation as well providing links to a larger toolkit to facilitate such sessions. I think these two bullet points encapsulate John&#8217;s teaching
+ * &#8220;Key goal of postmortems is to <span class="caps">LEARN</span> rather than bring list of TODOs away&#8221;
+ * &#8220;Goal of workshop on Postmortems is to help you ask better questions not give a magic&nbsp;process&#8221;</p>
+<p>In order to facilitate their Postmortem process Etsy have developed their own tool <a href="https://github.com/etsy/morgue/blob/master/README.md">Morgue</a> that allows them to tag, annotation and extract/link to specific issues in their Jira ticketing system. There&#8217;s a great talk by <a href="http://www.slideshare.net/devopsdays/morgue-helping-better-understand-events-by-building-a-post-mortem-tool-bethany-macri">Bethany Macri on the Morgue tool</a> that explains it in more&nbsp;depth.</p>
+<p>One of the reference for improving communications that John mentioned in his talk is the book &#8220;Crucial Conversations&#8221; and having recently bought a copy, I&#8217;d also concur. I also got a pointer to another excellent post from Lara Hogan (also at Etsy) on <a href="http://larahogan.me/blog/giving-presentation-feedback/">giving presentation feedback</a>. Etsy really impressed me at SRECon and looking forward to more of their talks in the&nbsp;future.</p>
+<p>This work and thinking are influenced on the five steps (see below) based on Dekker&#8217;s methodology. As such it very useful to read <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.411.4985&amp;rep=rep1&amp;type=pdf">&#8220;Reconstructing human contributions to accidents- the new view on error and performance&#8221; by Sidney <span class="caps">W.A.</span> Dekker</a> to help understand this &#8220;new thinking&#8221; and the rationale behind&nbsp;it.</p>
+<p>Five steps for a postmortem create a concept-depentant account from the context-specific event data:
+1. outline the sequence of events in context-specific language
+2. if necessary, break the sequence of events into episodes, if necessary (avoiding the global singular timeline)
+3. determine how the world changed during each episode
+4. identify what the focus of attention, the goals of people and what knowledge was active at that point in time
+5. work up to a conceptual&nbsp;description</p>
+<p>This thinking and John&#8217;s talk put forward the view that Reductionism is false that outcomes can be foreseen in complex systems, that time is reversible (you can&#8217;t rewind the buffer to reconstruct), and likewise that complete knowledge is not attainable. It underlined that &#8220;Why&#8221; is a terrible question to ask and immediately translated to &#8220;Who is responsible&#8221;. In a postmortem, when you ask &#8220;How&#8221; it translate to &#8220;What is responsbile&#8221;. Once you ask &#8220;Why&#8221; you lose context and it means that at least half of the key context and details are lost. One of the worst methods for a postmortem is the &#8220;Five Whys&#8221; as not only does it lose context but it also further loses complexity as it linear sequential. It is much better to ask &#8220;Why else&#8221; and better again to ask &#8220;How&#8221;. A key point was that &#8220;Why&#8221; is often used as a technique to shutdown conversations. At this point, there was recommendation to read the book &#8220;Crucial Conversations: Tools for Talking When Stakes Are High&#8221; and it&#8217;s definitely well worth&nbsp;it.</p>
+<p>There is so much useful stuff that John covered that a full blog series could be dedicated to it and my recommendation is that you view one of his many videos online if you&#8217;re interested in learning&nbsp;more.</p>
+<h4>Large Scale Abstract&nbsp;Design</h4>
+<p>This was a great half day small team classroom event where a real-world large scale engineering problem was presented. Each team had to come up with as much of the following as time&nbsp;allowed:</p>
+<ul>
+<li>A high-level design that scales&nbsp;horizontally</li>
+<li>Initial SLIs,&nbsp;SLOs</li>
+<li>Estimates for hardware required to run each&nbsp;component</li>
+<li>If time permits, monitoring design and disaster testing&nbsp;scenarios</li>
+</ul>
+<p>It was a great exercise and I&#8217;ll refain from saying too much more as we where asked to avoiding sharing the content as they will reuse it. However I can provide a few links to relevant&nbsp;talks/slides:</p>
+<ol>
+<li><a href="http://static.googleusercontent.com/media/research.google.com/en//people/jeff/stanford-295-talk.pdf">Software Engineering Advice from building Large Scale Systems by Jeff&nbsp;Dean</a></li>
+<li><a href="http://www.somethingsimilar.com/2013/01/14/notes-on-distributed-systems-for-young-bloods/">Notes on Distributed Systems for Young Bloods by Jeff&nbsp;Hodges</a></li>
+<li><a href="https://www.usenix.org/sites/default/files/conference/protected-files/srecon15europe_slides_nolan.pdf">Distributed Consensus Algorithms for Extreme Reliability by Laura&nbsp;Nolan</a></li>
+</ol>
+<h4>Machine Learning on Machine&nbsp;Data</h4>
+<p>There was a great series on statistical and machine learning talks, I attended the latter but I&#8217;ll include links to both for those who might want to refresh their statisticial skills:
+1. <a href="https://github.com/HeinrichHartmann/StatisticsTutorial">Statistics Tutorial for SREs by Heinrich Hartmann</a>
+2. <a href="https://docs.google.com/presentation/d/1JsanuUB8_6ae2mWEWyCzxhgcoe68G8EzaDgrgKUOopA/edit#slide=id.g9bd6a2176_2_87">Machine Learning for Machine&nbsp;Data</a></p>
+<p>The machine learning workshop was fast paced and required Splunk so if you&#8217;re interested in following the slides you&#8217;ll need to install it first. I learnt a few new tricks and enjoyed somebody else giving a talk on that topic (I&#8217;ve done a similar talk but with R recently). It was particularly nice to see how to structure the introduction and Splunk is a very powerful tool that I&#8217;ll definitely be learning/using&nbsp;more.</p>
+<h3>Talks</h3>
+<p>There was so many excellent talks that I can&#8217;t list them all. The standards where high and presentations excellent. I&#8217;ll include a few that cover the spectrum of topics&nbsp;covered:</p>
+<h3>Operational Software&nbsp;Design</h3>
+<p>Theo Schlossnagle gave an excellent talk on <a href="https://www.usenix.org/conference/srecon15europe/program/presentation/schlossnagle">Operational Software Design</a> with the <a href="http://www.slideshare.net/postwait/operational-software-design">full slides online</a>. It covered many tools such as DTrace, <a href="http://backtrace.io/">backtrace.io</a>, and their own <a href="https://github.com/circonus-labs/fq">fq</a>. He wrote fq to replace RabbitMq due to a number of issues where it was unable to work for their monitoring needs. fq is a brokered message queue using a publish subscribe model. It has been designed for performance and large number of connected&nbsp;clients.</p>
+<p>Russia&#8217;s Yandex (2nd search engine in Russia) talks about the types of load tests that they use and presented 
+<a href="https://github.com/yandex/yandex-tank">Yandex Tank</a> their tool for this. The <a href="https://www.usenix.org/sites/default/files/conference/protected-files/srecon15europe_slides_lavrenuke.pdf">slides</a> and <a href="https://www.usenix.org/conference/srecon15europe/program/presentation/lavrenuke">abstract</a> covered the full depth of this&nbsp;talk.</p>
+<p>I&#8217;m tied as which was my best talk as to whether it was from Susan Coghlan on improving infrastructure performance using root cause analysis (+2.5x <span class="caps">MTTF</span>) or Avleen Vig on <a href="https://www.usenix.org/conference/srecon15europe/program/presentation/vig">remote working</a>. Susan&#8217;s talk was from the Argonne <span class="caps">HPC</span> National Lab and showed how over the last five years, their process has contributed to improved reliability (e.g. 5x improvement <span class="caps">MTTI</span>), utilization (10% increase), and changed the problem priortisation approach. I think Avleen Vig wins out on how Etsy manages the challenges faced by engineers, management, and organizations, and ways to address the issues to successfully build distributed&nbsp;teams.</p>
+<h3>Useful&nbsp;Tools/Links</h3>
+<p>Here&#8217;s a list of tools and links I got from the&nbsp;talks.</p>
+<h4>Nagios&nbsp;related</h4>
+<ul>
+<li><a href="https://github.com/etsy/nagios-herald">nagios-herald</a></li>
+<li><a href="http://nagios.sourceforge.net/docs/3_0/largeinstalltweaks.html">Use the use_large_installation_tweaks configuration option in&nbsp;Nagios</a></li>
+</ul>
+<h4>Zookeeper&nbsp;related</h4>
+<ul>
+<li><a href="https://github.com/twitter/zktraffic">zktraffic, iptraf / top monitor for&nbsp;ZooKeeper</a></li>
+</ul>
+<h4>Kafka&nbsp;related</h4>
+<ul>
+<li><a href="https://github.com/edenhill/kafkacat">Kafkacat, a generic command line non-<span class="caps">JVM</span> Apache Kafka producer and&nbsp;consumer</a></li>
+<li><a href="https://github.com/Parsely/pykafka">PyKafka is a cluster-aware Kafka protocol client for python</a>. It includes python implementations of Kafka producers and&nbsp;consumers</li>
+<li><a href="https://github.com/jamiealquiza/sangrenel">Apache Kafka load testing&nbsp;weapon</a></li>
+<li><a href="https://github.com/stealthly/gauntlet">Apache Kafka Test Framework for Producer and Consumers for Compatibility&nbsp;Testing</a></li>
+<li><a href="https://github.com/stealthly/go_kafka_client">Go library for&nbsp;Kafka</a></li>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row comments">
+        <div class="span3">&nbsp;</div>
+        <div class="span6">
+        </div>
+    </div>
+</div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span6">
+                    <p><strong>Eoin Brazil</strong> is a computer scientist, UX architect, technical services engineer (similar to SRE) and data scientist. He works in the Technical Services team within MongoDB Engineering.</br>A range of his work can be found on <a href="https://github.com/braz">Github</a>.You can find his <a href="https://slideshare.net/eoinbrazil">talks</a> online.</p>
+                </div>
+                <div class="span4">
+                        <p><strong>Connect</strong></p>
+                        <ul class="socialLinks">
+                                <li><a href="http://www.twitter.com/eoinbrazil"><span class="symbol">&#xe086;</span> Twitter</a></li>
+                                <li><a href="http://ie.linkedin.com/in/eoinbrazil"><span class="symbol">&#xe052;</span> LinkedIn</a></li>
+                                <li><a href="https://foursquare.com/eoinbrazil"><span class="symbol">&#xe032;</span> Foursquare</a></li>
+                                <li><a href="http://www.github.com/braz"><span class="symbol">&#xe037;</span> GitHub</a></li>
+                        </ul>
+                </div>
+        </div>
+            </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://eoinbrazil.com/theme/js/bootstrap.min.js"></script>
+</body>
+</html>
