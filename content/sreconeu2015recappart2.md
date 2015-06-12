@@ -1,6 +1,6 @@
-Date: 2015-06-09
-Title: Recapping SRECon EU 2015 - Part 2
-Tagline: Site Reliablity Engineering from a European Perspective
+Date: 2015-06-13
+Title: Recapping SRECon EU 2015
+Tagline: Part 2
 Slug: sreconeu2015recappart2
 Category: Blog
 Tags: sre, presentations, usenix, review
@@ -48,3 +48,9 @@ The talk summarised this [report from Network Rail on the incident](https://www.
 One of the Google Storage SREs gave a very interesting talk on the personal side of how we (as individuals) manage interruptions in complex and busy production situations. In the case of SREs who both write code and work oncall it is important to really value keeping the engineering in the flow doing one thing well. It echos an earlier Velocity 2014 talk from Etsy who spoke about "[Mean Time to Sleep: Quantifying the On-Call Experience](https://www.youtube.com/watch?v=FLqucVb_et0)" which has [a blog post](https://codeascraft.com/2014/06/19/opsweekly-measuring-on-call-experience-with-alert-classification/) and their [opsweekly tool](https://github.com/etsy/opsweekly).
 
 These talks are very valuable as understanding and measuring the interrupts can help in crafting better contextualised alerts or in not alerting the engineer unless it is necessary. As more companies deployer larger systems and services these practices will become more wide spread but in the meanwhile it's great to see how others are managing this issue.
+
+### Aside regarding hiring and managing SREs
+The latest ;login Usenix magazine (June 2015, Vol. 40, No. 3) has two great articles including one from Todd Underwood (opening keynote speaker). These are well worth a read to help understand the role and how to hire the calibre of people needed for this type of role.
+
+  * ["Hiring Site Reliability Engineers" by Chris Jones, Todd Underwood, and Shyjala Nukala](https://www.usenix.org/publications/login/june15/hiring-site-reliability-engineers)
+  * ["The Systems Engineering Side of Site Reliability Engineering" by David Hixson and Betsy Beyer](https://www.usenix.org/publications/login/june15/hixson)
