@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Insights</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="http://eoinbrazil.com/theme/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="http://eoinbrazil.com/theme/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link href="http://eoinbrazil.com/theme/css/github.css" rel="stylesheet" media="screen">
+    <link href="http://eoinbrazil.com/theme/css/github-numbers.css" rel="stylesheet" media="screen">
+    <link href="http://eoinbrazil.com/theme/css/styles.css" rel="stylesheet" media="screen">
+
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css' >
+    <link href='http://fonts.googleapis.com/css?family=Cantora+One' rel='stylesheet' type='text/css'>
+
+        <link href="http://eoinbrazil.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Insights Atom Feed" />
+        <link href="http://eoinbrazil.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Insights RSS Feed" />
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-45182755-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</head>
+<body>
+    <div class="miniBio">
+        <div class="container">
+            <a class="brand" href="/" title="Insights"><img src="http://eoinbrazil.com/theme/img/avatar.png" /></a>
+            <span class="miniBioText">Creating ideas and insights.</span>
+        </div>
+    </div>
+
+    <div class="container">
+<div class="container">
+    <div class="row">
+        <div class="span12 articleDetailHeadline">
+            <h1>Recapping SRECon <span class="caps">EU</span>&nbsp;2015</h1>
+            <h2>Part 2</h2>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row articleDetail">
+        <div class="span3 articleInfo light">
+<p><i class="icon-calendar"></i>&nbsp;Sat 13 Jun 2015</p>
+    <p class="articleTags">
+        <i class="icon-tag"></i>&nbsp;tags:
+            <a href="http://eoinbrazil.com/tag/sre.html">sre</a>
+            <a href="http://eoinbrazil.com/tag/presentations.html">presentations</a>
+            <a href="http://eoinbrazil.com/tag/usenix.html">usenix</a>
+            <a href="http://eoinbrazil.com/tag/review.html">review</a>
+    </p>
+        </div>
+        <div class="span6 articleDetailContent">
+            <p>This is the second part of my notes and thoughts on <a href="https://www.usenix.org/conference/srecon15europe/program">SRECon Europe 2015</a>. The <a href="https://eoinbrazil.com/sreconeu2015recap.html">first part</a> covers focuses on the workshops and some of the talks I&nbsp;attended.</p>
+<h3>Talks</h3>
+<h4>Opening Keynote - PostOps: Recovery from&nbsp;Operations</h4>
+<p>The tone of the conference was set by Todd Underwood who is the Director of Google&#8217;s Site Reliability Engineering team. He neatly laid out and introduced <span class="caps">SRE</span> as the systems and software engineers who solve production problems with software. The concepts are inspired some what from Adrian Cockcroft&#8217;s &#8220;NoOps&#8221; where there is no operations organisation and it is software developers supported by automation who are working directly with production. This isn&#8217;t to say you shouldn&#8217;t take the best of operations culture and apply it to your production engineering team. Site reliability engineering needs to be taken as a first-class responsibility / citizen. The talk was a good summary of the various concerns and history as to why the computing sector needs to move beyond the definitions of &#8220;Administration&#8221; and of&nbsp;&#8220;Operations&#8221;.</p>
+<h4>Prometheus</h4>
+<p><a href="http://prometheus.io/">Prometheus</a> is a new monitoring system built by a number of engineers from SoundCloud and several former Google SREs. This <a href="https://developers.soundcloud.com/blog/prometheus-monitoring-at-soundcloud">Soundcloud Developers post introduces</a> the system and how it has been designed to overcome issues they found with StatsD and Graphite. The four key features they highlighted during the talk where:
+1. A multi-dimensional data model which allows pretty manuipulation of dimensions of the data
+2. Simplicity to install and operate
+3. Scalable data collection and decentralized architecture (time series collection via a pull model over <span class="caps">HTTP</span>)
+4. A query&nbsp;language</p>
+<p>It has a number of very useful features building on the work for systems like <a href="http://opentsdb.net/">OpenTSDB</a> and it has pretty much the same data model and syntax as OpenTSDB. This is where time series is identified by a metric name and a set of key-value pairs. These can be queried by its expression browser and the data can be visualised on dashboard using their PromDash tool. It hooks into to the likes of PagerDuty and supports a Nagios plugin allowing Prometheus to &#8216;bridge&#8217; to existing Nagios&nbsp;deployments.</p>
+<p>A big change is that Prometheus requires you to instrument your own code directly. The rationale for this is that is will provide higher quality service based monitoring.n instrumentation is usually worth the price. There are a range of client libraries for most programming languages. These client libraries allow metrics to be exposed via <span class="caps">HTTP</span> using either the protocol buffers format or as a simpler text-based&nbsp;format.</p>
+<p>The Prometheus servers scrape metrics from the instrumented applications directly or using a gateway. These samples then stored locally with rules executed over this data to generate new timeseries or to generate alerts. These streams of timestamped values all belong to the same metric with the same labeled dimesions. Timestamps are at a resolution of a millisecond resolution and the values are saved as 64-bit&nbsp;floats.</p>
+<p>There are a range of blogs about it but I&#8217;d highly recommend my fellow programme committee member Brian Brazil&#8217;s series monitoring on the <a href="http://www.boxever.com/tag/monitoring">Boxever blog</a>. He was key team player in helping to organising the conference and is a committer to&nbsp;Prometheus.</p>
+<h4>Signatures, Patterns, and Trends: Timeseries Data Mining at&nbsp;Etsy</h4>
+<p>I can well imagine one of the maxims at Etsy being, if it moves, measure it and even if it doesn&#8217;t, measure it. They record a ton of metrics and now have over a million metrics. This means they&#8217;re literally drowning in data and traditional approaches means that both alerting and graphicing are not cutting it. Graphs don&#8217;t scale well to a million distinct metrics and alert thresholds become very prone to triggering due to false&nbsp;positives.</p>
+<p>In order to manage this magnitude of metrics they have developed the <a href="https://codeascraft.com/2013/06/11/introducing-kale/">Kale stack</a>. It consists of <a href="https://github.com/etsy/skyline">Skyline</a> and <a href="https://github.com/etsy/oculus">Oculus</a>, the first help detects anomalous metrics and the latter is used to correlate patterns between metrics. This stack helps them detect any issues and make better hyptotheses around their&nbsp;problems.</p>
+<p>I definitely like the &#8216;hack&#8217; with the shape description alphabet for a timeseries similarity. The Etsy stack is focused on their problem of lots of metrics and how to monitor the million+ interdependent time-series. It stores these time series in Redis and uses ElasticSearch for the search component. The next iteration of the stack, &#8216;Thyme&#8217;, was the latter end of the talk and looks pretty&nbsp;cool.</p>
+<h4>Upgrade Your Database without Losing Your Data, Your Perf, or Your&nbsp;Mind</h4>
+<p>Charity Majors as ever gave an excellent talk that helped open the minds of many to the dangers of database upgrades. There is a shorter and earlier version of <a href="https://speakerdeck.com/charity/upgrading-databases-without-losing-your-data-your-perf-or-your-mind">this online</a>. I have to say go <a href="https://www.usenix.org/conference/srecon15europe/program/presentation/majors">watch the video</a> as it is one of the best talks but I&#8217;m a bit biased towards this topic these&nbsp;days!</p>
+<p>It discusses the apprioriate levels of paranoia you should have, the need to balance effort against risk, and how to capture and replay production traffic to feed this the database. She talked a little bit about their <a href="https://github.com/ParsePlatform/flashback">flashback tool for replaying MongoDB workloads</a>. There is a more detailed blog on the Parse site covering <a href="http://blog.parse.com/learn/engineering/mongodb-rocksdb-benchmark-setup-compression/">how to setup this tool</a>.</p>
+<h4>Going Off the Rails: Infrastructure Outage&nbsp;Planning</h4>
+<p>There was a nice talk reviewing some of the aspects of a major incident in the London Underground with hardware upgrades, hardware failure and insufficent planning all contributing. It particularly highlighted how the failure to implement one element of the plan around managing the loading/offloading of trains meant chaos and massive queues for passengers. There was a nice section on lesson learnt and plans to prevent future&nbsp;incidents.</p>
+<p>The talk summarised this <a href="https://www.networkrail.co.uk/review-into-disruption-affecting-kings-cross-and-paddington-services-27-December-2014.pdf">report from Network Rail on the incident</a> and focused on what learnings SREs could take from&nbsp;it.</p>
+<h4>Bad Machinery— Managing Interrupts Under&nbsp;Load</h4>
+<p>One of the Google Storage SREs gave a very interesting talk on the personal side of how we (as individuals) manage interruptions in complex and busy production situations. In the case of SREs who both write code and work oncall it is important to really value keeping the engineering in the flow doing one thing well. It echos an earlier Velocity 2014 talk from Etsy who spoke about &#8220;<a href="https://www.youtube.com/watch?v=FLqucVb_et0">Mean Time to Sleep: Quantifying the On-Call Experience</a>&#8221; which has <a href="https://codeascraft.com/2014/06/19/opsweekly-measuring-on-call-experience-with-alert-classification/">a blog post</a> and their <a href="https://github.com/etsy/opsweekly">opsweekly tool</a>.</p>
+<p>These talks are very valuable as understanding and measuring the interrupts can help in crafting better contextualised alerts or in not alerting the engineer unless it is necessary. As more companies deployer larger systems and services these practices will become more wide spread but in the meanwhile it&#8217;s great to see how others are managing this&nbsp;issue.</p>
+<h3>Aside regarding hiring and managing&nbsp;SREs</h3>
+<p>The latest ;login Usenix magazine (June 2015, Vol. 40, No. 3) has two great articles including one from Todd Underwood (opening keynote speaker). These are well worth a read to help understand the role and how to hire the calibre of people needed for this type of&nbsp;role.</p>
+<ul>
+<li><a href="https://www.usenix.org/publications/login/june15/hiring-site-reliability-engineers"><span class="dquo">&#8220;</span>Hiring Site Reliability Engineers&#8221; by Chris Jones, Todd Underwood, and Shyjala&nbsp;Nukala</a></li>
+<li><a href="https://www.usenix.org/publications/login/june15/hixson"><span class="dquo">&#8220;</span>The Systems Engineering Side of Site Reliability Engineering&#8221; by David Hixson and Betsy&nbsp;Beyer</a></li>
+</ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row comments">
+        <div class="span3">&nbsp;</div>
+        <div class="span6">
+        </div>
+    </div>
+</div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span6">
+                    <p><strong>Eoin Brazil</strong> is a computer scientist, UX architect, technical services engineer (similar to SRE) and data scientist. He works in the Technical Services team within MongoDB Engineering.</br>A range of his work can be found on <a href="https://github.com/braz">Github</a>.You can find his <a href="https://slideshare.net/eoinbrazil">talks</a> online.</p>
+                </div>
+                <div class="span4">
+                        <p><strong>Connect</strong></p>
+                        <ul class="socialLinks">
+                                <li><a href="http://www.twitter.com/eoinbrazil"><span class="symbol">&#xe086;</span> Twitter</a></li>
+                                <li><a href="http://ie.linkedin.com/in/eoinbrazil"><span class="symbol">&#xe052;</span> LinkedIn</a></li>
+                                <li><a href="https://foursquare.com/eoinbrazil"><span class="symbol">&#xe032;</span> Foursquare</a></li>
+                                <li><a href="http://www.github.com/braz"><span class="symbol">&#xe037;</span> GitHub</a></li>
+                        </ul>
+                </div>
+        </div>
+            </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://eoinbrazil.com/theme/js/bootstrap.min.js"></script>
+</body>
+</html>
