@@ -8,7 +8,7 @@ SITEURL = u'http://eoinbrazil.com'
 TIMEZONE = 'Europe/Dublin'
 # THEME = 'themes/modded_syte'
 THEME = 'themes/responsive'
-PLUGIN_PATH = '/Users/eoinbrazil/Desktop/Personal/pelican-plugins/'
+PLUGIN_PATHS = ['/Users/braz/Desktop/website/pelican-plugins/']
 PLUGINS = ['assets']
 
 # Uncomment following line if you want document-relative URLs when developing
@@ -38,7 +38,7 @@ STATIC_PATHS = [
 # options for syte theme
 ABOUT = u'Joining the dots from experience to product...'
 SITE_DESCRIPTION = u'Personal blog of Eoin Brazil'
-SITE_KEYWORDS = u'blog eoin braz brazil computer scientist data science datascience java analysis r rstats python node ruby consulting dublin machine learning cuda gpgpu ux hci parallel'
+SITE_KEYWORDS = u'blog eoin braz brazil mongodb computer scientist data science datascience java analysis r rstats python node ruby consulting dublin machine learning cuda gpgpu ux hci parallel'
 DISPLAY_HOME_ON_MENU = True
 TWITTER_INTEGRATION_ENABLED = False
 TWITTER_USERNAME = 'eoinbrazil'
@@ -46,7 +46,7 @@ GITHUB_INTEGRATION_ENABLED = False
 GITHUB_USERNAME = 'braz'
 
 MINI_BIO = u"Creating ideas and insights."
-BIO = u'<strong>Eoin Brazil</strong> is a computer scientist, UX architect, product manager and data scientist.</br>A range of his work can be found on <a href="https://github.com/braz">Github</a>.You can find his <a href="https://slideshare.net/eoinbrazil">talks</a> online.'
+BIO = u'<strong>Eoin Brazil</strong> is a computer scientist, UX architect, technical services engineer (similar to SRE) and data scientist. He leads the Proactive Technical Services team within MongoDB Engineering.</br>A range of his work can be found on <a href="https://github.com/braz">Github</a>.You can find his <a href="https://slideshare.net/eoinbrazil">talks</a> online.'
 
 # Blogroll
 LINKS =  (
@@ -66,15 +66,19 @@ SOCIAL = (
 	('GitHub', 'http://www.github.com/braz', '&#xe037;'),
 )
 
-FILES_TO_COPY = (
-	('extra/CNAME', 'CNAME'),
-	('extra/msc_thesis.pdf', "pdfs/msc_thesis.pdf"),
-	('extra/phd_thesis.pdf', "pdfs/phd_thesis.pdf"),
-	('extra/pgdip_dissertation.pdf', "pdfs/pgdip_dissertation.pdf")
-)
-# FILES_TO_COPY = (('extras/robots.txt','robots.txt')
-# 		,('extras/404.html', '404.html')
-# 		,('extras/favicon.ico','favicon.ico')
-# 		,('extras/favicon.png','favicon.png')
-# 		,('extras/apple-touch-icon.png','apple-touch-icon.png')
-# 		,('extras/google009ed94f89360f63.html','google009ed94f89360f63.html'))
+STATIC_PATHS = [
+    'extras',
+    'theme/img'
+    ]
+
+EXTRA_PATH_METADATA = {
+	'extras/CNAME': {'path':'CNAME'},
+	'extras/msc_thesis.pdf': {'path':"pdfs/msc_thesis.pdf"},
+	'extras/phd_thesis.pdf': {'path':"pdfs/phd_thesis.pdf"},
+	'extras/pgdip_dissertation.pdf': {'path':"pdfs/pgdip_dissertation.pdf"},
+	'extras/PyCon2015-PythonMongoDBDataPipelines-Keynote.pdf': {'path':"pdfs/PyCon2015-PythonMongoDBDataPipelines-Keynote.pdf"},
+	'extras/PyCon2016-IntroductionToGradientBoosting-powerpoint.pdf': {'path:':"pdfs/PyCon2016-IntroductionToGradientBoosting-powerpoint.pdf"},
+	'extras/PyCon2017-TwoApproachesToScaleYourProcessing.pdf': {'path':"pdfs/PyCon2017-TwoApproachesToScaleYourProcessing.pdf"},
+	'theme/img/avatar.png': {'path':"img/avatar.png"},
+	'theme/img/avatar.png': {'path':"favicon.ico"}
+}
