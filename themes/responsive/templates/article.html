@@ -21,6 +21,57 @@
     </div>
 </div>
 
+
+<div class="container">
+        <div class="span3">Related Posts</div>
+        <div class="span6">
+            {% if article.related_posts %}
+                <ul>
+                {% for related_post in article.related_posts %}
+                    <li><a href="{{ SITEURL }}/{{ related_post.url }}">{{ related_post.title }}</a></li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="container">
+        <div class="span3"></div>
+        <div class="span6">
+         {% if article.prev_article %}
+             Previous [
+                 <a href="{{ SITEURL }}/{{ article.prev_article.url}}">
+                     {{ article.prev_article.title }}
+                 </a> ]
+         <br>
+         {% endif %}
+         {% if article.next_article %}
+                 Next [ <a href="{{ SITEURL }}/{{ article.next_article.url}}">
+                     {{ article.next_article.title }}
+                 </a> ]
+         {% endif %}
+        </div>
+    </div>
+</div>
+
+
+{% if article.share_post and article.status != 'draft' %}
+<div class="container">
+    <div class="span3">&nbsp;</div>
+        <div class="span6" id="post-share-links">
+            Share via:
+            <a href="{{article.share_post['twitter']}}" target="_blank" title="Share on Twitter"><span class="symbol">&#xe286;</span></a>
+            <a href="{{article.share_post['facebook']}}" target="_blank" title="Share on Facebook"><span class="symbol">&#xe227;</span></a>
+            <a href="{{article.share_post['linkedin']}}" target="_blank" title="Share on LinkedIn"><span class="symbol">&#xe252;</span></a>
+            <a href="{{article.share_post['google-plus']}}" target="_blank" title="Share on Google Plus"><span class="symbol">&#xe239;</span></a>
+            <a href="{{article.share_post['email']}}" target="_blank" title="Share via Email"><span class="symbol">&#xe224;</span></a>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+
 <div class="container">
     <div class="row comments">
         <div class="span3">&nbsp;</div>

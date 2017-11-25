@@ -2,7 +2,7 @@ Date: 2015-06-07
 Title: Recapping SRECon EU 2015
 Tagline: Site Reliablity Engineering from a European Perspective
 Slug: sreconeu2015recap
-Category: Blog
+Category: Blog/SRE
 Tags: sre, presentations, usenix, review
 
 I had the pleasure of helping to organise as well as attending [SRECon Europe 2015](https://www.usenix.org/conference/srecon15europe/program). I have pulled together a few of my notes and links of interest to recap what was an excellent conference. It was focused on operations engineering and on site reliability topics with speakers from many of the big names (e.g. Google, Facebook, Yelp, Spotify amongst others).

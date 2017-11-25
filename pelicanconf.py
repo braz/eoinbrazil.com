@@ -9,7 +9,8 @@ TIMEZONE = 'Europe/Dublin'
 # THEME = 'themes/modded_syte'
 THEME = 'themes/responsive'
 PLUGIN_PATHS = ['/Users/braz/Desktop/website/pelican-plugins/']
-PLUGINS = ['assets']
+PLUGINS = ['assets', 'neighbors', 'share_post', 'sitemap', 'related_posts']
+RELATED_POSTS_MAX = 5
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
@@ -81,4 +82,19 @@ EXTRA_PATH_METADATA = {
 	'extras/PyCon2017-TwoApproachesToScaleYourProcessing.pdf': {'path':"pdfs/PyCon2017-TwoApproachesToScaleYourProcessing.pdf"},
 	'theme/img/avatar.png': {'path':"img/avatar.png"},
 	'theme/img/avatar.png': {'path':"favicon.ico"}
+}
+
+SITEMAP = {
+	'exclude': ['tag/', 'category/'],
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
 }

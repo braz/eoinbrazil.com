@@ -2,7 +2,7 @@ Date: 2015-06-13
 Title: Recapping SRECon EU 2015
 Tagline: Part 2
 Slug: sreconeu2015recappart2
-Category: Blog
+Category: Blog/SRE
 Tags: sre, presentations, usenix, review
 
 This is the second part of my notes and thoughts on [SRECon Europe 2015](https://www.usenix.org/conference/srecon15europe/program). The [first part](https://eoinbrazil.com/sreconeu2015recap.html) covers focuses on the workshops and some of the talks I attended.
