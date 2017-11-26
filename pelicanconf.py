@@ -85,7 +85,7 @@ EXTRA_PATH_METADATA = {
 	'extras/DublinR - Machine Learning - Machine Learnings on Machines.pdf': {'path':"pdfs/DublinR - Machine Learning - Machine Learnings on Machines.pdf"},
 	'extras/DublinR - Machine Learning 101 - Introduction with Examples.pdf': {'path':"pdfs/DublinR - Machine Learning 101 - Introduction with Examples.pdf"},
 	'extras/avatar.png': {'path':"img/avatar.png"},
-	'theme/img/avatar.png': {'path':"favicon.ico"}
+	'theme/img/favicon.ico': {'path':"favicon.ico"}
 }
 
 SITEMAP = {
