@@ -84,7 +84,7 @@ EXTRA_PATH_METADATA = {
 	'extras/DublinR - Beyond the Single Instance - Leveraging the Public Cloud for Large Computations.pdf': {'path':"pdfs/DublinR - Beyond the Single Instance - Leveraging the Public Cloud for Large Computations.pdf"},
 	'extras/DublinR - Machine Learning - Machine Learnings on Machines.pdf': {'path':"pdfs/DublinR - Machine Learning - Machine Learnings on Machines.pdf"},
 	'extras/DublinR - Machine Learning 101 - Introduction with Examples.pdf': {'path':"pdfs/DublinR - Machine Learning 101 - Introduction with Examples.pdf"},
-	'theme/img/avatar.png': {'path':"img/avatar.png"},
+	'extras/avatar.png': {'path':"img/avatar.png"},
 	'theme/img/avatar.png': {'path':"favicon.ico"}
 }
 
