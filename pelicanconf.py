@@ -9,7 +9,8 @@ TIMEZONE = 'Europe/Dublin'
 # THEME = 'themes/modded_syte'
 THEME = 'themes/responsive'
 PLUGIN_PATHS = ['/Users/braz/Desktop/website/pelican-plugins/']
-PLUGINS = ['assets', 'neighbors', 'share_post', 'sitemap', 'related_posts']
+PLUGINS = ['assets', 'neighbors', 'share_post', 'sitemap', 'related_posts', 
+'yuicompressor', 'optimize_images']
 RELATED_POSTS_MAX = 5
 
 # Uncomment following line if you want document-relative URLs when developing
@@ -80,6 +81,9 @@ EXTRA_PATH_METADATA = {
 	'extras/PyCon2015-PythonMongoDBDataPipelines-Keynote.pdf': {'path':"pdfs/PyCon2015-PythonMongoDBDataPipelines-Keynote.pdf"},
 	'extras/PyCon2016-IntroductionToGradientBoosting-powerpoint.pdf': {'path:':"pdfs/PyCon2016-IntroductionToGradientBoosting-powerpoint.pdf"},
 	'extras/PyCon2017-TwoApproachesToScaleYourProcessing.pdf': {'path':"pdfs/PyCon2017-TwoApproachesToScaleYourProcessing.pdf"},
+	'extras/DublinR - Beyond the Single Instance - Leveraging the Public Cloud for Large Computations.pdf': {'path':"pdfs/DublinR - Beyond the Single Instance - Leveraging the Public Cloud for Large Computations.pdf"},
+	'extras/DublinR - Machine Learning - Machine Learnings on Machines.pdf': {'path':"pdfs/DublinR - Machine Learning - Machine Learnings on Machines.pdf"},
+	'extras/DublinR - Machine Learning 101 - Introduction with Examples.pdf': {'path':"pdfs/DublinR - Machine Learning 101 - Introduction with Examples.pdf"},
 	'theme/img/avatar.png': {'path':"img/avatar.png"},
 	'theme/img/avatar.png': {'path':"favicon.ico"}
 }
