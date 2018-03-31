@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Insights</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="./theme/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="./theme/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link href="./theme/css/github.css" rel="stylesheet" media="screen">
+    <link href="./theme/css/github-numbers.css" rel="stylesheet" media="screen">
+    <link href="./theme/css/styles.css" rel="stylesheet" media="screen">
+
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css' >
+    <link href='http://fonts.googleapis.com/css?family=Cantora+One' rel='stylesheet' type='text/css'>
+
+        <link href="http://eoinbrazil.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Insights Atom Feed" />
+        <link href="http://eoinbrazil.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Insights RSS Feed" />
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-45182755-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</head>
+<body>
+    <div class="miniBio">
+        <div class="container">
+            <a class="brand" href="/" title="Insights"><img src="./img/avatar.png" /></a>
+            <span class="miniBioText">Creating ideas and insights.</span>
+        </div>
+    </div>
+
+    <div class="container">
+<div class="container">
+    <div class="row">
+        <div class="span12 articleDetailHeadline">
+            <h1>Celery Database&nbsp;Bottlenecks</h1>
+            <h2>The joys of performance whack-a-mole with distributed systems</h2>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row articleDetail">
+        <div class="span3 articleInfo light">
+<p><i class="icon-calendar"></i>&nbsp;Sat 31 Mar 2018</p>
+    <p class="articleTags">
+        <i class="icon-tag"></i>&nbsp;tags:
+            <a href="./tag/python.html">python</a>
+            <a href="./tag/queues.html">queues</a>
+            <a href="./tag/celery.html">celery</a>
+            <a href="./tag/bottlenecks.html">bottlenecks</a>
+    </p>
+        </div>
+        <div class="span6 articleDetailContent">
+            <p>I recently had to refactor some code which uses MongoDB and Celery to store results from a scraping process to a MongoDB collection. It involved a number of whack a mole type performance problems due to the distributed nature of the system, and indeed was leading to the <a href="https://linux-mm.org/OOM_Killer">Linux out of memory (<span class="caps">OOM</span>) killer</a> being triggered against some of those workers. I wanted to write up some of the approaches I took as they may be helpful to others and indeed maybe there are better ways out there to handle the same situation (so any feedback would be much&nbsp;appreciated!).</p>
+<p>The inspiration for writing this approach in a blog was another <a href="https://www.vinta.com.br/blog/2018/dealing-resource-consuming-tasks-celery/">blog post on handling memory intensive Celery workers</a>. This highlighted yet another Celery setting I wasn&#8217;t using on <a href="http://docs.celeryproject.org/en/latest/userguide/optimizing.html#prefetch-limits">prefetch limits</a> or indeed aware of. The approach from that blog used Celery&#8217;s worker prefetch limiting to avoid running out of memory on the workers. The approach below was what I used to avoid running out of memory. It occurs at one step earlier by avoiding sending tasks to the Celery worker from the Python programme distributing the work than throttling the tasks once on the workers. I think either approach may work and I&#8217;m glad to have found the blog to both prompt future thinking and my writing of this&nbsp;post.</p>
+<h2>1. Limit task submission if Database queue is at or above the maximum&nbsp;threshold</h2>
+<p>This function implemented a simple limit and wait logic for the application calling the specific Celery Workers, the example below uses a trivialised example with a single Worker named &#8216;celery1&#8217;. The Celery task inspection function, celery.task.control.inspect(), is queried in the calling Python programme and the running-threads value for the specific worker (which is only used for this one queue) is what determines whether this function will return. If there are too many existing tasks on the worker, the function will sleep until the number of tasks are less than the value set for the variable,&nbsp;message_queue_max.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_and_backoff_if_db_queue_at_max</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="n">message_queue_max</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">ins</span> <span class="o">=</span> <span class="n">inspect</span><span class="p">()</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">queue_over_max_length_for_worker_1</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="n">all_stats</span> <span class="o">=</span> <span class="n">ins</span><span class="o">.</span><span class="n">stats</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">all_stats</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;No Celery Workers have been detected.&quot;</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">all_stats</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;celery1&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">all_stats</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="s1">&#39;pool&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;running-threads&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">message_queue_max</span><span class="p">:</span>
+                <span class="n">queue_over_max_length_for_worker_1</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="k">if</span> <span class="n">queue_over_max_length_for_worker_1</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;The DB queue is above </span><span class="si">%s</span><span class="s2"> pausing for 15 seconds.&quot;</span><span class="p">,</span> <span class="n">message_queue_max</span><span class="p">)</span>
+            <span class="n">sleep</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">break</span>
+<span class="k">except</span> <span class="n">kombu</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">OperationalError</span><span class="p">:</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Failed to connect to Celery Workers or to RabbitMQ at {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">celery_config</span><span class="o">.</span><span class="n">broker_url</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<h2>2. Setting appropriate task settings for this type of <span class="caps">DB</span>&nbsp;task</h2>
+<p>In order to better manage this type of task, I set three of Celery&#8217;s Task setting. The results are ignored from the task, the task was configured for only acknowledged late rather than using the default of acknowledge on receipt rather than completion of the task (acks_late), and finally the time limits for this task was removed. The task is also configured to make two retry attempts if it&nbsp;fails.</p>
+<div class="highlight"><pre><span></span><span class="n">max_retries</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ignore_result</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">acks_late</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">soft_time_limit</span><span class="o">=</span><span class="bp">None</span>
+</pre></div>
+
+
+<h2>3. Changing the database usage from a upsert to a insert and ignore&nbsp;approach</h2>
+<p>This step actually removed the need for the backoff for my particular usage where a large number of upserts operations (updates for existing documents or if not present then the document(s) are inserted) were the root cause of the Celery Worker having such a long queue. A change to a insert only approach, which was feasible for my application as it only required the document to be present once, provided close on two orders of magnitute improvement to the database operations and significantly reduced the Celery Worker queue as tasks were no longer backing&nbsp;up.</p>
+<div class="highlight"><pre><span></span><span class="n">bulk_result</span> <span class="o">=</span> <span class="n">MongoClient</span><span class="p">(</span><span class="n">mongo_uri</span><span class="p">)</span><span class="o">.</span><span class="n">DATABASE</span><span class="o">.</span><span class="n">COLLECTION</span><span class="o">.</span><span class="n">bulk_write</span><span class="p">(</span><span class="n">array_of_insert_one_operations</span><span class="p">,</span> <span class="n">ordered</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>
+
+
+<h2>4. Minor discoveries in a useful practical sense but not core to solving my&nbsp;problem</h2>
+<p>In the reading and research to address my queue growing too large and triggering the <a href="https://linux-mm.org/OOM_Killer">Linux out of memory (<span class="caps">OOM</span>) killer</a>, I found two useful Celery setting which I had not been aware of. Firstly, you can setup Celery Workers to receive events using the (&#8220;-E&#8221;) option which allows for restarting worker pools directly through Celery Flower (the Management <span class="caps">UI</span> I use for Celery) when combined with the &#8220;worker_pool_restarts&#8221;&nbsp;setting.</p>
+<p>A second aspect of our internal tooling using a scraper approach, specifically a number of the workers use tasks that are primarily focused on asychronous <span class="caps">HTTP</span> requests so these use the <a href="http://docs.celeryproject.org/en/latest/userguide/concurrency/eventlet.html">Eventlet execution pool</a>. The deployment uses a standard Celery/RabbitMQ configuration. RabbitMQ uses a default setting where 10 concurrent connections are kept open for the broker pool when used with Celery. The setting &#8220;broker_pool_limit&#8221; allows for this to be raised, in this example below it is set to 100 which is more suitable for this type of Celery Worker/Eventlet execution pool&nbsp;combination.</p>
+<div class="highlight"><pre><span></span><span class="n">worker_pool_restarts</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">broker_pool_limit</span> <span class="o">=</span> <span class="mi">100</span>
+</pre></div>
+
+
+<h2>Future&nbsp;directions</h2>
+<p>The tooling currently uses <a href="http://docs.celeryproject.org/en/latest/reference/celery.bin.multi.html">celery.bin.multi</a> with bash scripting as each node hosts multiple workers, however it is being containerized so I think my next blog will cover moving to <a href="http://supervisord.org/">supervisord</a> with a Celery setup of multiple workers per node providing multiple&nbsp;queues.</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+        <div class="span3">Related Posts</div>
+        <div class="span6">
+                <ul>
+                    <li><a href="./queuesandworkflows.html">Two approaches to scale your processing: Task Queues and&nbsp;Workflows</a></li>
+                    <li><a href="./datapipelineswithpythonandmongodb.html">Data Pipelines with Python and&nbsp;MongoDB</a></li>
+                    <li><a href="./gradientboostingwithpython.html">An introduction to Gradient&nbsp;Boosting</a></li>
+                </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+        <div class="span3"></div>
+        <div class="span6">
+             Previous [
+                 <a href="./queuesandworkflows.html">
+                     Two approaches to scale your processing: Task Queues and&nbsp;Workflows
+                 </a> ]
+         <br>
+                 Next [ <a href="./about-me.html">
+                     About
+                 </a> ]
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="span3">&nbsp;</div>
+        <div class="span6" id="post-share-links">
+            Share via:
+            <a href="https://twitter.com/intent/tweet?text=Celery%20Database%C2%A0Bottlenecks&url=http%3A//eoinbrazil.com/celerydatabasebottlenecks.html" target="_blank" title="Share on Twitter"><span class="symbol">&#xe286;</span></a>
+            <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//eoinbrazil.com/celerydatabasebottlenecks.html" target="_blank" title="Share on Facebook"><span class="symbol">&#xe227;</span></a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//eoinbrazil.com/celerydatabasebottlenecks.html&title=Celery%20Database%C2%A0Bottlenecks&summary=I%20recently%20had%20to%20refactor%20some%20code%20which%20uses%20MongoDB%20and%20Celery%20to%20store%20results%20from%20a%20scraping%20process%20to%20a%20MongoDB%20collection.%20It%20involved%20a%20number%20of%20whack%20a%20mole%20type%20performance%20problems%20due%20to%20the%20distributed%20nature%20of%20the%20system%2C%20and%20indeed%20was%20leading%20to%20the%20Linux%20out%20%E2%80%A6&source=http%3A//eoinbrazil.com/celerydatabasebottlenecks.html" target="_blank" title="Share on LinkedIn"><span class="symbol">&#xe252;</span></a>
+            <a href="https://plus.google.com/share?url=http%3A//eoinbrazil.com/celerydatabasebottlenecks.html" target="_blank" title="Share on Google Plus"><span class="symbol">&#xe239;</span></a>
+            <a href="mailto:?subject=Celery%20Database%C2%A0Bottlenecks&amp;body=http%3A//eoinbrazil.com/celerydatabasebottlenecks.html" target="_blank" title="Share via Email"><span class="symbol">&#xe224;</span></a>
+            Feed Subscription via:
+            <a href="./feeds/all.rss.xml" target="_blank" title="RSS Feed"><span class="symbol">&#xe271;</span></a>
+            <a href="./feeds/all.atom.xml" target="_blank" title="ATOM Feed"><span class="symbol">&#xe211;</span></a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row comments">
+        <div class="span3">&nbsp;</div>
+        <div class="span6">
+        </div>
+    </div>
+</div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span6">
+                    <p><strong>Eoin Brazil</strong> is a computer scientist, UX architect, technical services engineer (similar to SRE) and data scientist. He leads the Proactive Technical Services team within MongoDB Engineering.</br>A range of his work can be found on <a href="https://github.com/braz">Github</a>.You can find his <a href="https://slideshare.net/eoinbrazil">talks</a> online.</p>
+                </div>
+                <div class="span4">
+                        <p><strong>Connect</strong></p>
+                        <ul class="socialLinks">
+                                <li><a href="http://www.twitter.com/eoinbrazil"><span class="symbol">&#xe086;</span> Twitter</a></li>
+                                <li><a href="http://ie.linkedin.com/in/eoinbrazil"><span class="symbol">&#xe052;</span> LinkedIn</a></li>
+                                <li><a href="https://foursquare.com/eoinbrazil"><span class="symbol">&#xe032;</span> Foursquare</a></li>
+                                <li><a href="http://www.github.com/braz"><span class="symbol">&#xe037;</span> GitHub</a></li>
+                                <li><a href="http://eoinbrazil.com/feeds/all.rss.xml"><span class="symbol">&#xe071;</span> RSS</a></li>
+                                <li><a href="http://eoinbrazil.com/feeds/all.atom.xml"><span class="symbol">&#xe011;</span> ATOM</a></li>
+                        </ul>
+                </div>
+        </div>
+            </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="./theme/js/bootstrap.min.js"></script>
+</body>
+</html>
