@@ -50,6 +50,13 @@ GITHUB_USERNAME = 'braz'
 MINI_BIO = u"Creating ideas and insights."
 BIO = u'<strong>Eoin Brazil</strong> is a computer scientist, UX architect, technical services engineer (similar to SRE) and data scientist. He leads the Proactive Technical Services team within MongoDB Engineering.</br>A range of his work can be found on <a href="https://github.com/braz">Github</a>.You can find his <a href="https://slideshare.net/eoinbrazil">talks</a> online.'
 
+# Feeds
+
+ALL_FEEDS = {
+	'RSS': 'feeds/all.rss.xml',
+	'ATOM': 'feeds/all.atom.xml'
+}
+
 # Blogroll
 LINKS =  (
 	('Python Ireland', 'http://python.ie/'),
@@ -66,6 +73,8 @@ SOCIAL = (
 	('LinkedIn','http://ie.linkedin.com/in/eoinbrazil', '&#xe052;'),
 	('Foursquare','https://foursquare.com/eoinbrazil', '&#xe032;'),
 	('GitHub', 'http://www.github.com/braz', '&#xe037;'),
+	('RSS', 'http://eoinbrazil.com/feeds/all.rss.xml', '&#xe071;'),
+	('ATOM', 'http://eoinbrazil.com/feeds/all.atom.xml', '&#xe011;')
 )
 
 STATIC_PATHS = [
