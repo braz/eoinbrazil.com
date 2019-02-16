@@ -11,7 +11,7 @@ I had the pleasure of presenting at PyCon 2015 and also at MongoDB Days UK 2015 
 
 Both of my talks source's and examples are in Github repos, [PyCon 2015](https://github.com/braz/pycon2015_talk) and [MongoDB Days UK 2015](https://github.com/braz/mongodbdays2015_talk). The PyCon talk was aimed at introducing how you can use Python for building a data pipeline where MongoDB was the source for your data. 
 
-[Pycon 2015 Talk PDF version]({filename}/extras/PyCon2015-PythonMongoDBDataPipelines-Keynote.pdf)
+[Pycon 2015 Talk PDF version]({static}/extras/PyCon2015-PythonMongoDBDataPipelines-Keynote.pdf)
 
 The [MongoDB Days UK talk](https://speakerdeck.com/braz/pycon-2015-using-mongodb-and-python-for-data-analysis-p) but was aimed at more advanced MongoDB audience.
 

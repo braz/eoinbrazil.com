@@ -11,6 +11,6 @@ In 2016, I again had the pleasure of presenting to the annual Python Ireland Con
 
 The source and examples for this talk are in a Github repo [PyCon 2016](https://github.com/braz/pycon2016_talk) as well as some setup instructions to replicate my examples.
 
-[Pycon 2016 Talk PDF version]({filename}/extras/PyCon2015-PythonMongoDBDataPipelines-Keynote.pdf)
+[Pycon 2016 Talk PDF version]({static}/extras/PyCon2015-PythonMongoDBDataPipelines-Keynote.pdf)
 
 <script async class="speakerdeck-embed" data-id="5f40e5cb272d41b9b38de535d90fb6dc" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>

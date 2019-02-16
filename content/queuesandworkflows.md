@@ -11,6 +11,6 @@ I was very fortunate to present to the main track at PyCon Ireland 2017 on the t
 
 The talk was entitled ["Two approaches to scale your processing: Task Queues and Workflows"](https://docs.google.com/presentation/d/1W7WvodRej6A3XAPYWOCS6dZam_z5DV2gXhLimKRrGbM/edit?usp=sharing) and was aimed at an intermediate Python audience to introduce them to the Celery and Airflow tools for queues and for workflows respectively. It was more mainstream talk than the data science track I'd prevoiusly presented at and I was able to talk about many of my own learnings building tooling with MongoDB.
 
-[Pycon 2017 Talk PDF version]({filename}/extras/PyCon2017-TwoApproachesToScaleYourProcessing.pdf)
+[Pycon 2017 Talk PDF version]({static}/extras/PyCon2017-TwoApproachesToScaleYourProcessing.pdf)
 
 <script async class="speakerdeck-embed" data-id="3fa87c9829184c4189d612283a5c9040" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
