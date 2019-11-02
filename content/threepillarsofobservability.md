@@ -7,6 +7,8 @@ Tags: python, observability, monitoring, bottlenecks
 
 I was at PyCon Ireland 2018 this year and lucky to have my talk on Observability accepted.
 
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/dRpiFMd2EOU?list=PLNeBS51Q0m9_EsF_j4UaMQj3x6-abfcDO" frameborder="0" gesture="media" allowfullscreen></iframe>
+
 The title of the talk was ["Adding the three pillars of Observability to your Python app"](https://docs.google.com/presentation/d/1k3ORfyxYjV56N4j4f_n5B--kWHWE8qQ93WiuGo2Kjos/edit?usp=sharing) and was aimed at an intermediate Python audience defining observability, monitoring as well as highlighting various tools/libraries I found useful in my work in this area. I spoke about many of my own learnings building observability into existing Python applications and services.
 
 [Pycon 2018 Talk PDF version]({static}/extras/PyCon2018-AddingTheThreePillarsOfObservabilityToYourPythonApp.pdf)
