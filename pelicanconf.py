@@ -30,12 +30,6 @@ GOOGLE_ANALYTICS = 'UA-45182755-1'
 PDF_GENERATOR = False
 REVERSE_CATEGORY_ORDER = True
 DEFAULT_PAGINATION = False
-STATIC_PATHS = [
-    'CNAME',
-	'images',
-	'pdfs',
-	'theme/img/avatar.png'
-]
 
 # options for syte theme
 ABOUT = u'Joining the dots from experience to product...'
@@ -77,10 +71,15 @@ SOCIAL = (
 	('ATOM', 'http://eoinbrazil.com/feeds/all.atom.xml', '&#xe011;')
 )
 
+
 STATIC_PATHS = [
+    'CNAME',
+	'images',
+	'pdfs',
+	'theme/img/avatar.png',
     'extras',
     'theme/img'
-    ]
+]
 
 EXTRA_PATH_METADATA = {
 	'extras/CNAME': {'path':'CNAME'},
