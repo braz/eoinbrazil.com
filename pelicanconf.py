@@ -5,13 +5,15 @@ from __future__ import unicode_literals
 AUTHOR = u'Eoin Brazil'
 SITENAME = u'Insights'
 SITEURL = u'http://eoinbrazil.com'
-TIMEZONE = 'Europe/Dublin'
-# THEME = 'themes/modded_syte'
 THEME = 'themes/responsive'
 PLUGIN_PATHS = ['/Users/braz/Desktop/website/pelican-plugins/']
 PLUGINS = ['assets', 'neighbors', 'share_post', 'sitemap', 'related_posts', 
 'yuicompressor', 'optimize_images']
 RELATED_POSTS_MAX = 5
+
+PATH = 'content'
+
+TIMEZONE = 'Europe/Dublin'
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
@@ -26,10 +28,12 @@ FEED_ALL_RSS = 'feeds/all.rss.xml'
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 
 GOOGLE_ANALYTICS = 'UA-45182755-1'
-
 PDF_GENERATOR = False
 REVERSE_CATEGORY_ORDER = True
 DEFAULT_PAGINATION = False
+
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
 
 # options for syte theme
 ABOUT = u'Joining the dots from experience to product...'
