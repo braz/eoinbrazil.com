@@ -13,7 +13,7 @@ A fold away desk isn't a typical order but in Dublin there were two companies, [
 
 #### Laptop, mouse and webcam
 
-My computer is a MacBook and I use it with a Griffin Elavator stand as well as a Logitech wireless marble mouse. I use an [EditorsKey Vi cover](ttps://www.editorskeys.com/products/vi-vim-keyboard-covers-for-macbook-imac) on it which probably has saved it from disaster to often to count. I use a Logitech C920 web cam instead of the Macbook standard webcam, it's definitely an improvement.
+My computer is a MacBook and I use it with a [Griffin Elavator stand](https://griffintechnology.com/products/elevator) as well as a Logitech wireless m570 trackball mouse. I use an [EditorsKey Vi cover](https://www.editorskeys.com/products/vi-vim-keyboard-covers-for-macbook-imac) on it which probably has saved it from disaster to often to count. I use a [Logitech C920 web cam](https://www.logitech.com/en-us/product/hd-pro-webcam-c920) instead of the Macbook standard webcam, it's definitely an improvement.
 
 #### Networking gear
 
@@ -27,14 +27,16 @@ I use a set of closed [Audio-Technica ATH-M40X](https://www.audio-technica.com/e
 
 #### Lighting gear
 
-My lighting is from a [Elgato Key Light Air](https://www.elgato.com/en/gaming/key-light-air) and a [LumeCube Video Conference Lighting for Remote Working](https://lumecube.com/products/video-conference-lighting-kit-for-remote-workers). I only recently got the Elagto and it's replaced LumeCube as my main light. I plan on using the much smaller LubeCube as a secondary light.
+My lighting is from a [Elgato Key Light Air](https://www.elgato.com/en/gaming/key-light-air) and a [LumeCube Video Conference Lighting for Remote Working](https://lumecube.com/products/video-conference-lighting-kit-for-remote-workers). I only recently got the Elgato and it's replaced LumeCube as my main light. I plan on using the much smaller LubeCube as a secondary light or when traveling.
 
 #### Additional gear for various tasks
 
 I use a [HooToo USB C Hub](https://www.hootoo.com/p/b07yb2znrn) to manage all the peripherals. I have a few extras pieces that I use for teaching including a [Luna Display](https://shop.astropad.com/) (allows me to use an iPad as a second screen and indeed input to my laptop), a pair of [Joby Gorillapod tripods](https://joby.com/global/gorillapod-flexible-camera-tripods/), and a MEKO Upgraded Fine Tip Stylus Pen for an iPad. I also have a [Joby GripTight Pro 2](https://joby.com/global/griptight-pro-2-mount-jb01525-bww/) which I use to hold my phone as an ad-hoc whiteboard with the [Camo app](https://reincubate.com/camo/). I have also been experimenting with [OBS Open Broadcast Software](https://obsproject.com/).
 
+I also have a pack of [Video Conference Cards](https://agilestationery.co.uk/products/video-conference-cards) from Agile Stationery which are great fun to use.
+
 #### Software
 
 I use [Vanilla](https://matthewpalmer.net/vanilla/) to manage the menu bar, [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704) to keep my laptop on, [Keyboard Maestro](https://www.keyboardmaestro.com/main/) for various macros, [BetterTouchTool](https://folivora.ai/) for a nice toolbar, and [Witch](https://manytricks.com/witch/) for window screen switching. 
 
-In terms of my audio software, I went all in on [Rogue Amoeba](https://rogueamoeba.com/) and love all of their software. I use SoundSource for managing my sources, Audio Hijack for various tasks including some preprocessing on my mic input, Loopback for wiring my Audio Hijack output to my Zoom or desired application, and Farrango for adding the odd random sound effect.
+In terms of my audio software, I went all in on [Rogue Amoeba](https://rogueamoeba.com/) and love all of their software. I use [SoundSource](https://rogueamoeba.com/soundsource/) for managing my sources, [Audio Hijack](https://rogueamoeba.com/audiohijack/) for various tasks including some preprocessing on my mic input, [Loopback](https://rogueamoeba.com/loopback/) for wiring my Audio Hijack output to my Zoom or desired application, and [Farrango](https://rogueamoeba.com/farrago/) for adding the odd random sound effect.
