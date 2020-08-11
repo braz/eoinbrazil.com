@@ -13,11 +13,11 @@ A fold away desk isn't a typical order but in Dublin there were two companies, [
 
 #### Laptop, mouse and webcam
 
-My computer is a MacBook and I use it with a [Griffin Elavator stand](https://griffintechnology.com/products/elevator) as well as a Logitech wireless m570 trackball mouse. I use an [EditorsKey Vi cover](https://www.editorskeys.com/products/vi-vim-keyboard-covers-for-macbook-imac) on it which probably has saved it from disaster to often to count. I use a [Logitech C920 web cam](https://www.logitech.com/en-us/product/hd-pro-webcam-c920) instead of the Macbook standard webcam, it's definitely an improvement.
+My computer is a MacBook and I use it with a [Griffin Elavator stand](https://griffintechnology.com/products/elevator) as well as a [Logitech wireless m570 trackball mouse](https://www.logitech.com/en-roeu/product/wireless-trackball-m570). I use an [EditorsKey Vi cover](https://www.editorskeys.com/products/vi-vim-keyboard-covers-for-macbook-imac) on it which probably has saved it from disaster to often to count. I use a [Logitech C920 web cam](https://www.logitech.com/en-us/product/hd-pro-webcam-c920) instead of the Macbook standard webcam, it's definitely an improvement.
 
 #### Networking gear
 
-I upgraded my home network during May to a Unifi Dream Machine and FlexHD primarily inspired by [this post from Troy Hunt](https://www.troyhunt.com/friends-dont-let-friends-use-dodgy-wifi-introducing-ubiquitis-dream-machine-and-flexhd/). It has been brilliant and I can't recommend it highly enough.
+I upgraded my home network during May to a [Unifi Dream Machine](https://eu.store.ui.com/products/unifi-dream-machine) and [FlexHD](https://eu.store.ui.com/collections/unifi/products/unifi-flexhd) primarily inspired by [this post from Troy Hunt](https://www.troyhunt.com/friends-dont-let-friends-use-dodgy-wifi-introducing-ubiquitis-dream-machine-and-flexhd/). It has been brilliant and I can't recommend it highly enough.
 
 #### Audio gear
 
@@ -37,6 +37,18 @@ I also have a pack of [Video Conference Cards](https://agilestationery.co.uk/pro
 
 #### Software
 
-I use [Vanilla](https://matthewpalmer.net/vanilla/) to manage the menu bar, [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704) to keep my laptop on, [Keyboard Maestro](https://www.keyboardmaestro.com/main/) for various macros, [BetterTouchTool](https://folivora.ai/) for a nice toolbar, and [Witch](https://manytricks.com/witch/) for window screen switching. 
+I use [Vanilla](https://matthewpalmer.net/vanilla/) to manage the menu bar, [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704) to keep my laptop on, [Keyboard Maestro](https://www.keyboardmaestro.com/main/) for various macros, [BetterTouchTool](https://folivora.ai/) for a nice toolbar, and [Witch](https://manytricks.com/witch/) for window screen switching. I use [SnapNDrag Pro](https://www.yellowmug.com/snapndrag/) for screen or window captures. I use [ScreenFlow](https://www.telestream.net/screenflow/overview.htm) for capturing the voice overs of lessons and indeed any video offline capture.
 
 In terms of my audio software, I went all in on [Rogue Amoeba](https://rogueamoeba.com/) and love all of their software. I use [SoundSource](https://rogueamoeba.com/soundsource/) for managing my sources, [Audio Hijack](https://rogueamoeba.com/audiohijack/) for various tasks including some preprocessing on my mic input, [Loopback](https://rogueamoeba.com/loopback/) for wiring my Audio Hijack output to my Zoom or desired application, and [Farrango](https://rogueamoeba.com/farrago/) for adding the odd random sound effect.
+
+##### SoundSource Setup
+
+![SoundSource setup]({attach}extras/soundsource_setup.png)
+
+##### Audio Hijack Setup
+
+![AudioHijack setup]({attach}extras/audio_hijack_setup.png)
+
+##### Loopback Setup
+
+![Loopback setup]({attach}extras/loopback_setup.png)
