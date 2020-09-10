@@ -3,7 +3,7 @@ Slug: home-office-bill-of-materials
 Author: Eoin Brazil
 Date: 2020-08-10
 Category: Blog/HomeOffice
-Tags: office, equipment, software
+Tags: office, equipment, software, hardware
 
 My home office is literally a desk in the corner of a bedroom which is returned to use as a bedroom after I finish work. All the setup and gear I have fits this requirement. 
 
@@ -13,7 +13,7 @@ A fold away desk isn't a typical order but in Dublin there were two companies, [
 
 #### Laptop, mouse and webcam
 
-My computer is a MacBook and I use it with a [Griffin Elavator stand](https://griffintechnology.com/products/elevator) as well as a [Logitech wireless m570 trackball mouse](https://www.logitech.com/en-roeu/product/wireless-trackball-m570). I use an [EditorsKey Vi cover](https://www.editorskeys.com/products/vi-vim-keyboard-covers-for-macbook-imac) on it which probably has saved it from disaster to often to count. I use a [Logitech C920 web cam](https://www.logitech.com/en-us/product/hd-pro-webcam-c920) instead of the Macbook standard webcam, it's definitely an improvement.
+My computer is a MacBook and I use it with a [Griffin Elavator stand](https://griffintechnology.com/products/elevator) as well as a [Logitech wireless m570 trackball mouse](https://www.logitech.com/en-roeu/product/wireless-trackball-m570). I use an [EditorsKey Vi cover](https://www.editorskeys.com/products/vi-vim-keyboard-covers-for-macbook-imac) on it which probably has saved it from disaster too often to count. I use a [Logitech C920 web cam](https://www.logitech.com/en-us/product/hd-pro-webcam-c920) instead of the Macbook standard webcam, it's definitely an improvement.
 
 #### Networking gear
 
