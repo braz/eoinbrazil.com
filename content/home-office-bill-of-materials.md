@@ -5,7 +5,7 @@ Date: 2020-08-10
 Category: Blog/HomeOffice
 Tags: office, equipment, software, hardware
 
-My home office is literally a desk in the corner of a bedroom which is returned to use as a bedroom after I finish work. All the setup and gear I have fits this requirement. 
+My home office is literally a desk in the corner of a bedroom which is returned to use as a bedroom after I finish work. All the setup and gear I has to fit this requirement. 
 
 #### Furniture
 

@@ -45,7 +45,7 @@ GITHUB_INTEGRATION_ENABLED = False
 GITHUB_USERNAME = 'braz'
 
 MINI_BIO = u"Creating ideas and insights."
-BIO = u'<strong>Eoin Brazil</strong> is a computer scientist, UX architect, technical services engineer (similar to SRE), author, teacher and data scientist. He has worked in various technical, leadership and educational roles within MongoDB Engineering. He currently works in the MongoDB Education team.</br></br>A range of his work can be found on <a href="https://github.com/braz">Github</a>. Information on his co-authored book <a href="https://mongodbbook.info">MongoDB: The Definitive Guide 3rd edition from O\'Reilly</a>. You can find his <a href="https://slideshare.net/eoinbrazil">talks</a> online as well as his <a href="http://eoinbrazil.com/extras/vitae-eoinbrazil-feb-2019-dev.pdf">CV</a>.'
+BIO = u'<strong>Eoin Brazil</strong> is a computer scientist, UX architect, technical services engineer (similar to SRE), author, teacher and data scientist. He has worked in various technical, leadership and educational roles within MongoDB Engineering. He currently works in the MongoDB Education team.</br></br>A range of his work can be found on <a href="https://github.com/braz">Github</a>. Information on his co-authored book <a href="https://mongodbbook.info">MongoDB: The Definitive Guide 3rd edition from O\'Reilly</a>. You can find his <a href="https://slideshare.net/eoinbrazil">talks</a> online as well as his <a href="http://eoinbrazil.com/pdfs/vitae-eoinbrazil-feb-2019-dev.pdf">CV</a>.'
 
 # Feeds
 

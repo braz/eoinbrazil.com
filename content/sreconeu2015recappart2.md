@@ -5,7 +5,7 @@ Slug: sreconeu2015recappart2
 Category: Blog/SRE
 Tags: sre, presentations, usenix, review
 
-This is the second part of my notes and thoughts on [SRECon Europe 2015](https://www.usenix.org/conference/srecon15europe/program). The [first part](https://eoinbrazil.com/sreconeu2015recap.html) covers focuses on the workshops and some of the talks I attended.
+This is the second part of my notes and thoughts on [SRECon Europe 2015](https://www.usenix.org/conference/srecon15europe/program). The [first part](http://eoinbrazil.com/sreconeu2015recap.html) covers focuses on the workshops and some of the talks I attended.
 
 ### Talks
 
