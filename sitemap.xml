@@ -4,182 +4,182 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://eoinbrazil.com/</loc>
-<lastmod>2021-06-23T11:47:12-00:00</lastmod>
+<loc>http://eoinbrazil.com/</loc>
+<lastmod>2021-06-23T11:57:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/archives.html</loc>
-<lastmod>2021-06-23T11:47:12-00:00</lastmod>
+<loc>http://eoinbrazil.com/archives.html</loc>
+<lastmod>2021-06-23T11:57:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/tags.html</loc>
-<lastmod>2021-06-23T11:47:12-00:00</lastmod>
+<loc>http://eoinbrazil.com/tags.html</loc>
+<lastmod>2021-06-23T11:57:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/categories.html</loc>
-<lastmod>2021-06-23T11:47:12-00:00</lastmod>
+<loc>http://eoinbrazil.com/categories.html</loc>
+<lastmod>2021-06-23T11:57:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/krisp-audiohijacked-loopbacked-zoom-calls.html</loc>
+<loc>http://eoinbrazil.com/krisp-audiohijacked-loopbacked-zoom-calls.html</loc>
 <lastmod>2021-06-23T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/about-me.html</loc>
+<loc>http://eoinbrazil.com/about-me.html</loc>
 <lastmod>2020-11-10T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/even-more-home-office-updates.html</loc>
+<loc>http://eoinbrazil.com/even-more-home-office-updates.html</loc>
 <lastmod>2020-10-23T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/home-office-updates.html</loc>
+<loc>http://eoinbrazil.com/home-office-updates.html</loc>
 <lastmod>2020-09-10T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/home-office-bill-of-materials.html</loc>
+<loc>http://eoinbrazil.com/home-office-bill-of-materials.html</loc>
 <lastmod>2020-08-10T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/mongodb-book-available.html</loc>
+<loc>http://eoinbrazil.com/mongodb-book-available.html</loc>
 <lastmod>2019-12-13T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/mongodb-book-landing-page.html</loc>
+<loc>http://eoinbrazil.com/mongodb-book-landing-page.html</loc>
 <lastmod>2019-11-30T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/mongodb-book.html</loc>
+<loc>http://eoinbrazil.com/mongodb-book.html</loc>
 <lastmod>2019-10-31T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/threepillarsofobservability.html</loc>
+<loc>http://eoinbrazil.com/threepillarsofobservability.html</loc>
 <lastmod>2018-11-10T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/celerydatabasebottlenecks.html</loc>
+<loc>http://eoinbrazil.com/celerydatabasebottlenecks.html</loc>
 <lastmod>2018-03-31T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/queuesandworkflows.html</loc>
+<loc>http://eoinbrazil.com/queuesandworkflows.html</loc>
 <lastmod>2017-09-14T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/gradientboostingwithpython.html</loc>
+<loc>http://eoinbrazil.com/gradientboostingwithpython.html</loc>
 <lastmod>2016-10-07T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/usethecloudandrtoscale.html</loc>
+<loc>http://eoinbrazil.com/usethecloudandrtoscale.html</loc>
 <lastmod>2015-11-24T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/datapipelineswithpythonandmongodb.html</loc>
+<loc>http://eoinbrazil.com/datapipelineswithpythonandmongodb.html</loc>
 <lastmod>2015-10-08T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/sreconeu2015recappart2.html</loc>
+<loc>http://eoinbrazil.com/sreconeu2015recappart2.html</loc>
 <lastmod>2015-06-13T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/sreconeu2015recap.html</loc>
+<loc>http://eoinbrazil.com/sreconeu2015recap.html</loc>
 <lastmod>2015-06-07T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/my-research.html</loc>
+<loc>http://eoinbrazil.com/my-research.html</loc>
 <lastmod>2015-03-22T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/machinemlwithr.html</loc>
+<loc>http://eoinbrazil.com/machinemlwithr.html</loc>
 <lastmod>2015-03-21T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/handyinteractiondesign.html</loc>
+<loc>http://eoinbrazil.com/handyinteractiondesign.html</loc>
 <lastmod>2013-11-11T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/omnigrafflestencilforfonts.html</loc>
+<loc>http://eoinbrazil.com/omnigrafflestencilforfonts.html</loc>
 <lastmod>2013-10-30T00:00:00+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/introtomlwithr.html</loc>
+<loc>http://eoinbrazil.com/introtomlwithr.html</loc>
 <lastmod>2013-10-08T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eoinbrazil.com/author/eoin-brazil.html</loc>
+<loc>http://eoinbrazil.com/author/eoin-brazil.html</loc>
 <lastmod>2021-06-23T00:00:00-00:25</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
