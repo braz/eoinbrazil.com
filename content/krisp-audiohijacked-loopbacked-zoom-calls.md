@@ -1,7 +1,7 @@
 Title: Krisp Audio Hijacked Loopbacked Zoom Calls
 Slug: krisp-audiohijacked-loopbacked-zoom-calls
 Author: Eoin Brazil
-Date: 2020-11-09
+Date: 2021-06-23
 Category: Blog/HomeOffice
 Tags: office, software, hardware
 
@@ -23,9 +23,11 @@ In [Zoom](https://zoom.us/) I use the advanced audio configuration to enable the
 
 For [Zoom](https://zoom.us/), I use firstly use [Krisp](https://krisp.ai/) and I pipe my microphone to it as an input. It uses Deep Neural Networks to provide noise cancellation. It has 'learnt' many different noises and fairly seamlessly removes these from the audio input.
 
-I think use [Audio Hijack](https://rogueamoeba.com/audiohijack/) to further process the audio output from [Krisp](https://krisp.ai/). I use the following processing elements: Declick, Dehum, AUHighShelfFilter, AUPeakLimiter, and AUMultiBandCompressor. This is then sent to a ZoomOutputDevice from within the application.
+I use [Audio Hijack](https://rogueamoeba.com/audiohijack/) to further process the audio output from [Krisp](https://krisp.ai/). I use the following processing elements: Declick, Dehum, AUHighShelfFilter, AUPeakLimiter, and AUMultiBandCompressor. This is then sent to a ZoomOutputDevice from within the application.
 
 ![AudioHijack setup]({attach}extras/audio_hijack_zoom_setup.png)
+
+Within the [Audio Hijack](https://rogueamoeba.com/audiohijack/) processing chain, I've added a number of plugins from [Waves Audio](https://www.waves.com) to further process the audio. Specifically these are: [DeEsser (s)](https://www.waves.com/plugins/deesser), [NS1 (s)](https://www.waves.com/plugins/ns1-noise-suppressor), and [Vocal Rider Live (s)](https://www.waves.com/plugins/vocal-rider). These further clear up any excessive sibilance, general noise, and dynamically control my vocal gain. After some use of this and particularly the vocal gain control, I added an additional processing element (Volume) within [Audio Hijack](https://rogueamoeba.com/audiohijack/) to slightly boost the audio post all of the processing.
 
 Finally, I use [Loopback](https://rogueamoeba.com/loopback/) for wiring my Audio Hijack output to [Zoom](https://zoom.us/) and to also link [Farrango](https://rogueamoeba.com/farrago/) to [Zoom](https://zoom.us/). I find that [Farrango](https://rogueamoeba.com/farrago/) is great as a sound board with a few extra sounds from [FreeSound.org](https://freesound.org/) to add precanned sound effects to any call.
 
