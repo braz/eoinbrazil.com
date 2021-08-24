@@ -5,11 +5,11 @@
     <title>Insights</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="http://eoinbrazil.com/theme/css/bootstrap.css" rel="stylesheet" media="screen">
-    <link href="http://eoinbrazil.com/theme/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
-    <link href="http://eoinbrazil.com/theme/css/github.css" rel="stylesheet" media="screen">
-    <link href="http://eoinbrazil.com/theme/css/github-numbers.css" rel="stylesheet" media="screen">
-    <link href="http://eoinbrazil.com/theme/css/styles.css" rel="stylesheet" media="screen">
+    <link href="./theme/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="./theme/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link href="./theme/css/github.css" rel="stylesheet" media="screen">
+    <link href="./theme/css/github-numbers.css" rel="stylesheet" media="screen">
+    <link href="./theme/css/styles.css" rel="stylesheet" media="screen">
 
     <link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css' >
     <link href='http://fonts.googleapis.com/css?family=Cantora+One' rel='stylesheet' type='text/css'>
@@ -30,7 +30,7 @@
 <body>
     <div class="miniBio">
         <div class="container">
-            <a class="brand" href="/" title="Insights"><img src="http://eoinbrazil.com/img/avatar.png" /></a>
+            <a class="brand" href="/" title="Insights"><img src="./img/avatar.png" /></a>
             <span class="miniBioText">Creating ideas and insights.</span>
         </div>
     </div>
@@ -51,9 +51,9 @@
 <p><i class="icon-calendar"></i>&nbsp;Wed 23 Jun 2021</p>
     <p class="articleTags">
         <i class="icon-tag"></i>&nbsp;tags:
-            <a href="http://eoinbrazil.com/tag/office.html">office</a>
-            <a href="http://eoinbrazil.com/tag/software.html">software</a>
-            <a href="http://eoinbrazil.com/tag/hardware.html">hardware</a>
+            <a href="./tag/office.html">office</a>
+            <a href="./tag/software.html">software</a>
+            <a href="./tag/hardware.html">hardware</a>
     </p>
         </div>
         <div class="span6 articleDetailContent">
@@ -64,13 +64,13 @@
 <h4>Audio&nbsp;Software</h4>
 <p>I am a huge fan of all things <a href="https://rogueamoeba.com/">Rogue Amoeba</a>, they simply make great&nbsp;software.</p>
 <p>In <a href="https://zoom.us/">Zoom</a> I use the advanced audio configuration to enable the original audio input and remove echo cancellation as well as to select a higher quality of audio. These settings are really important as otherwise all the later audio processing won&#8217;t really add much quality or value to your audio for other call participants. In most calls, you will still have to manually select use original audio and hopefully down the line that will be might also be a default&nbsp;setting.</p>
-<p><img alt="Zoom setup" src="http://eoinbrazil.com/extras/zoom_advanced_audio_setup.png"></p>
+<p><img alt="Zoom setup" src="./extras/zoom_advanced_audio_setup.png"></p>
 <p>For <a href="https://zoom.us/">Zoom</a>, I use firstly use <a href="https://krisp.ai/">Krisp</a> and I pipe my microphone to it as an input. It uses Deep Neural Networks to provide noise cancellation. It has &#8216;learnt&#8217; many different noises and fairly seamlessly removes these from the audio&nbsp;input.</p>
 <p>I use <a href="https://rogueamoeba.com/audiohijack/">Audio Hijack</a> to further process the audio output from <a href="https://krisp.ai/">Krisp</a>. I use the following processing elements: Declick, Dehum, AUHighShelfFilter, AUPeakLimiter, and AUMultiBandCompressor. This is then sent to a ZoomOutputDevice from within the&nbsp;application.</p>
-<p><img alt="AudioHijack setup" src="http://eoinbrazil.com/extras/audio_hijack_zoom_setup.png"></p>
+<p><img alt="AudioHijack setup" src="./extras/audio_hijack_zoom_setup.png"></p>
 <p>Within the <a href="https://rogueamoeba.com/audiohijack/">Audio Hijack</a> processing chain, I&#8217;ve added a number of plugins from <a href="https://www.waves.com">Waves Audio</a> to further process the audio. Specifically these are: <a href="https://www.waves.com/plugins/deesser">DeEsser (s)</a>, <a href="https://www.waves.com/plugins/ns1-noise-suppressor"><span class="caps">NS1</span> (s)</a>, and <a href="https://www.waves.com/plugins/vocal-rider">Vocal Rider Live (s)</a>. These further clear up any excessive sibilance, general noise, and dynamically control my vocal gain. After some use of this and particularly the vocal gain control, I added an additional processing element (Volume) within <a href="https://rogueamoeba.com/audiohijack/">Audio Hijack</a> to slightly boost the audio post all of the&nbsp;processing.</p>
 <p>Finally, I use <a href="https://rogueamoeba.com/loopback/">Loopback</a> for wiring my Audio Hijack output to <a href="https://zoom.us/">Zoom</a> and to also link <a href="https://rogueamoeba.com/farrago/">Farrango</a> to <a href="https://zoom.us/">Zoom</a>. I find that <a href="https://rogueamoeba.com/farrago/">Farrango</a> is great as a sound board with a few extra sounds from <a href="https://freesound.org/">FreeSound.org</a> to add precanned sound effects to any&nbsp;call.</p>
-<p><img alt="Loopback setup" src="http://eoinbrazil.com/extras/loopback_setup_zoom.png"></p>
+<p><img alt="Loopback setup" src="./extras/loopback_setup_zoom.png"></p>
         </div>
     </div>
 </div>
@@ -80,9 +80,10 @@
         <div class="span3">Related Posts</div>
         <div class="span6">
                 <ul>
-                    <li><a href="http://eoinbrazil.com/home-office-bill-of-materials.html">My home office and it&#8217;s bill of&nbsp;materials</a></li>
-                    <li><a href="http://eoinbrazil.com/even-more-home-office-updates.html">Even more updates to my home&nbsp;office</a></li>
-                    <li><a href="http://eoinbrazil.com/home-office-updates.html">Some updates to my home&nbsp;office</a></li>
+                    <li><a href="./home-office-bill-of-materials.html">My home office and it&#8217;s bill of&nbsp;materials</a></li>
+                    <li><a href="./keeping-your-internet-up-with-ups.html">Keeping your home internet up with an uninterruptible power&nbsp;supply</a></li>
+                    <li><a href="./even-more-home-office-updates.html">Even more updates to my home&nbsp;office</a></li>
+                    <li><a href="./home-office-updates.html">Some updates to my home&nbsp;office</a></li>
                 </ul>
         </div>
     </div>
@@ -92,11 +93,11 @@
         <div class="span3"></div>
         <div class="span6">
              Previous [
-                 <a href="http://eoinbrazil.com/about-me.html">
-                     About
+                 <a href="./even-more-home-office-updates.html">
+                     Even more updates to my home&nbsp;office
                  </a> ]
          <br>
-                 Next [ <a href="http://eoinbrazil.com/mongodb-introduction-to-modern-databases.html">
+                 Next [ <a href="./mongodb-introduction-to-modern-databases.html">
                      Introduction to Modern&nbsp;Databases
                  </a> ]
         </div>
@@ -114,8 +115,8 @@
             <a href="" target="_blank" title="Share on Google Plus"><span class="symbol">&#xe239;</span></a>
             <a href="mailto:?subject=Krisp%20Audio%20Hijacked%20Loopbacked%20Zoom%C2%A0Calls&amp;body=http%3A//eoinbrazil.com/krisp-audiohijacked-loopbacked-zoom-calls.html" target="_blank" title="Share via Email"><span class="symbol">&#xe224;</span></a>
             Feed Subscription via:
-            <a href="http://eoinbrazil.com/feeds/all.rss.xml" target="_blank" title="RSS Feed"><span class="symbol">&#xe271;</span></a>
-            <a href="http://eoinbrazil.com/feeds/all.atom.xml" target="_blank" title="ATOM Feed"><span class="symbol">&#xe211;</span></a>
+            <a href="./feeds/all.rss.xml" target="_blank" title="RSS Feed"><span class="symbol">&#xe271;</span></a>
+            <a href="./feeds/all.atom.xml" target="_blank" title="ATOM Feed"><span class="symbol">&#xe211;</span></a>
         </div>
     </div>
 </div>
@@ -151,6 +152,6 @@
     </div>
 
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="http://eoinbrazil.com/theme/js/bootstrap.min.js"></script>
+    <script src="./theme/js/bootstrap.min.js"></script>
 </body>
 </html>
