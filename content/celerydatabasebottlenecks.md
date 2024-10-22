@@ -4,6 +4,7 @@ Tagline: The joys of performance whack-a-mole with distributed systems
 Slug: celerydatabasebottlenecks
 Category: Blog/Python
 Tags: python, queues, celery, bottlenecks
+Description: Using MongoDB with Celery, a tale of debugging and performance.
 
 I recently had to refactor some code which uses MongoDB and Celery to store results from a scraping process to a MongoDB collection. It involved a number of whack a mole type performance problems due to the distributed nature of the system, and indeed was leading to the [Linux out of memory (OOM) killer](https://linux-mm.org/OOM_Killer) being triggered against some of those workers. I wanted to write up some of the approaches I took as they may be helpful to others and indeed maybe there are better ways out there to handle the same situation (so any feedback would be much appreciated!).
 

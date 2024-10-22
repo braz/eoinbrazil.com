@@ -6,9 +6,34 @@ AUTHOR = u'Eoin Brazil'
 SITENAME = u'Insights'
 SITEURL = u'http://eoinbrazil.com'
 THEME = 'themes/responsive'
-PLUGIN_PATHS = ['/Users/braz/Desktop/website/pelican-plugins/']
-PLUGINS = ['assets', 'neighbors', 'share_post', 'sitemap', 'related_posts', 'yuicompressor', 'optimize_images']
-RELATED_POSTS_MAX = 5
+RELATED_POSTS_MAX = 6
+
+CSS_MIN = True
+JS_MIN = True
+HTML_MIN = True
+INLINE_CSS_MIN = True
+INLINE_JS_MIN = True
+
+SEO_REPORT = True  # SEO report is enabled by default
+SEO_ENHANCER = True  # SEO enhancer is disabled by default
+SEO_ENHANCER_OPEN_GRAPH = False # Subfeature of SEO enhancer
+SEO_ENHANCER_TWITTER_CARDS = False # Subfeature of SEO enhancer
+
+WEBASSETS_CONFIG = [
+  ("closure_compressor_optimization", "ADVANCED_OPTIMIZATIONS"),
+  ("libsass_style", "compressed")
+]
+
+IMAGE_PROCESS = {
+    "thumb": {
+        "type": "image",
+        "ops": ["crop 0 0 50% 50%", "scale_out 150 150 True", "crop 0 0 150 150"],
+    },
+    "article-image": {
+        "type": "image",
+        "ops": ["scale_in 300 300 True"],
+    },
+}
 
 PATH = 'content'
 
@@ -34,7 +59,7 @@ DEFAULT_PAGINATION = False
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# options for syte theme
+# options for style theme
 ABOUT = u'Joining the dots from experience to product...'
 SITE_DESCRIPTION = u'Personal blog of Eoin Brazil'
 SITE_KEYWORDS = u'blog eoin braz brazil mongodb computer scientist data science datascience java analysis r rstats python node ruby consulting dublin machine learning cuda gpgpu ux hci parallel'

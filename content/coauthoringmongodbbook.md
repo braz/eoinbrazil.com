@@ -4,6 +4,7 @@ Author: Eoin Brazil
 Date: 2019-10-31
 Category: Blog/MongoDB
 Tags: mongodb, writing, book
+Description: Writing as part of the team who authored MongoDB: The Definitive Guide, 3rd Edition 
 
 I'd been holding off on this post for the last few months as I'd being asked by Shannon Bradshaw to help write the third edition of "MongoDB: The Definitive Guide". I wanted to wait until it was well underway and by the time I'd gotten back to this post, it ended up being past the first copy writing check of the entire book.
 

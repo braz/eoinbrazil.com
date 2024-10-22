@@ -12,6 +12,10 @@ pre {
     word-wrap: inherit;
 }
 
+@view-transition {
+    navigation: auto;
+}
+
 .highlighttable .linenos pre {
     background-color: #f3f3f3;
     border-right: none;
