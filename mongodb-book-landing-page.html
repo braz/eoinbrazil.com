@@ -1,158 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Insights</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="./theme/css/bootstrap.css" rel="stylesheet" media="screen">
-    <link href="./theme/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
-    <link href="./theme/css/github.css" rel="stylesheet" media="screen">
-    <link href="./theme/css/github-numbers.css" rel="stylesheet" media="screen">
-    <link href="./theme/css/styles.css" rel="stylesheet" media="screen">
-
-    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css' >
-    <link href='http://fonts.googleapis.com/css?family=Cantora+One' rel='stylesheet' type='text/css'>
-
-        <link href="http://eoinbrazil.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Insights Atom Feed" />
-        <link href="http://eoinbrazil.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Insights RSS Feed" />
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-45182755-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
-</head>
-<body>
-    <div class="miniBio">
-        <div class="container">
-            <a class="brand" href="/" title="Insights"><img src="./img/avatar.png" /></a>
-            <span class="miniBioText">Creating ideas and insights.</span>
-        </div>
-    </div>
-
-    <div class="container">
-<div class="container">
-    <div class="row">
-        <div class="span12 articleDetailHeadline">
-            <h1>Making a landing page for MongoDB The Definitive&nbsp;Guide</h1>
-            <h2></h2>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row articleDetail">
-        <div class="span3 articleInfo light">
-<p><i class="icon-calendar"></i>&nbsp;Sat 30 Nov 2019</p>
-    <p class="articleTags">
-        <i class="icon-tag"></i>&nbsp;tags:
-            <a href="./tag/mongodb.html">mongodb</a>
-            <a href="./tag/writing.html">writing</a>
-            <a href="./tag/book.html">book</a>
-            <a href="./tag/website.html">website</a>
-    </p>
-        </div>
-        <div class="span6 articleDetailContent">
-            <p>In advance of the book launch later in December I&#8217;ve been doing a little preparation. It turns out that Github is proving not just a useful location for the <a href="https://github.com/mongodb-the-definitive-guide-3e/">source code</a> but that it also is an excellent place to host the book&#8217;s <a href="https://mongodbbook.info/">website/landing page</a>.</p>
-<p>I owe a lot of thanks to <a href="https://twitter.com/mhausenblas">Michael Hausenblas</a> and his own excellent book on <a href="https://programming-kubernetes.info/">Programming Kubernetes</a> which served as the inspiration and guide for my own landing&nbsp;page.</p>
-<p>This used Github Pages and Jekyll with the <a href="https://github.com/orderedlist/minimal">&#8216;minimal&#8217; theme</a> by <a href="https://github.com/orderedlist">Steve Smith</a>. I also choose to use this approach for my landing&nbsp;page.</p>
-<p>I turned to <a href="https://gandi.net">gandi.net</a> for my domain registration and in keeping with several other O&#8217;Reilly authors, I chose a <em>.info</em> domain. I decided on the short, simple, and available <a href="https://mongodbbook.info/">mongodbbook.info</a> domain&nbsp;name.</p>
-<p>After adding the content to the landing page, including a soon to be active Twitter account at <a href="https://twitter.com/MongodbT">&#8220;MongodbT&#8221;</a>. I made some minor tweaks to the <a href="https://github.com/mongodb-the-definitive-guide-3e/mongodbbook.info/blob/master/_config.yml">_config.yml</a> file,&nbsp;specifically:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">author</span><span class="p">:</span>
-  <span class="nt">twitter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">eoinbrazil</span>
-<span class="nt">url</span><span class="p">:</span> <span class="s">&quot;https://mongodbbook.info/&quot;</span>
-<span class="nt">plugins</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">jekyll-sitemap</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">jekyll-feed</span>
-</code></pre></div>
-
-<p>This minor additions allow for attribution to my twitter handle as well as providing a <a href="https://mongodbbook.info/sitemap.xml">sitemap xml file</a> and a <a href="https://mongodbbook.info/feed.xml">atom feed file</a>. The Sitemap file allowed me to submit it to Bing, Google, and Yandex to allow it to be crawled a little sooner than if left to the automated crawler&nbsp;searches.</p>
-        </div>
-    </div>
-</div>
-
-
-<div class="container">
-        <div class="span3">Related Posts</div>
-        <div class="span6">
-                <ul>
-                    <li><a href="./mongodb-book-available.html">MongoDB The Definitive Guide 3rd Edition&nbsp;Available</a></li>
-                    <li><a href="./mongodb-book.html">Co-authoring MongoDB: The Definitive Guide, 3rd&nbsp;Edition</a></li>
-                    <li><a href="./mongodb-introduction-to-modern-databases.html">Introduction to Modern&nbsp;Databases</a></li>
-                    <li><a href="./datapipelineswithpythonandmongodb.html">Data Pipelines with Python and&nbsp;MongoDB</a></li>
-                </ul>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-        <div class="span3"></div>
-        <div class="span6">
-             Previous [
-                 <a href="./mongodb-book.html">
-                     Co-authoring MongoDB: The Definitive Guide, 3rd&nbsp;Edition
-                 </a> ]
-         <br>
-                 Next [ <a href="./mongodb-book-available.html">
-                     MongoDB The Definitive Guide 3rd Edition&nbsp;Available
-                 </a> ]
-        </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="span3">&nbsp;</div>
-        <div class="span6" id="post-share-links">
-            Share via:
-            <a href="https://twitter.com/intent/tweet?text=Making%20a%20landing%20page%20for%20MongoDB%20The%20Definitive%C2%A0Guide&url=http%3A//eoinbrazil.com/mongodb-book-landing-page.html&via=eoinbrazil&hashtags=mongodb,writing,book,website" target="_blank" title="Share on Twitter"><span class="symbol">&#xe286;</span></a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//eoinbrazil.com/mongodb-book-landing-page.html" target="_blank" title="Share on Facebook"><span class="symbol">&#xe227;</span></a>
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//eoinbrazil.com/mongodb-book-landing-page.html&title=Making%20a%20landing%20page%20for%20MongoDB%20The%20Definitive%C2%A0Guide&summary=In%20advance%20of%20the%20book%20launch%20later%20in%20December%20I%E2%80%99ve%20been%20doing%20a%20little%20preparation.%20It%20turns%20out%20that%20Github%20is%20proving%20not%20just%20a%20useful%20location%20for%20the%20source%20code%20but%20that%20it%20also%20is%20an%20excellent%20place%20to%20host%20the%20book%E2%80%99s%20website/landing%20page.%0AI%20owe%20%E2%80%A6&source=http%3A//eoinbrazil.com/mongodb-book-landing-page.html" target="_blank" title="Share on LinkedIn"><span class="symbol">&#xe252;</span></a>
-            <a href="" target="_blank" title="Share on Google Plus"><span class="symbol">&#xe239;</span></a>
-            <a href="mailto:?subject=Making%20a%20landing%20page%20for%20MongoDB%20The%20Definitive%C2%A0Guide&amp;body=http%3A//eoinbrazil.com/mongodb-book-landing-page.html" target="_blank" title="Share via Email"><span class="symbol">&#xe224;</span></a>
-            Feed Subscription via:
-            <a href="./feeds/all.rss.xml" target="_blank" title="RSS Feed"><span class="symbol">&#xe271;</span></a>
-            <a href="./feeds/all.atom.xml" target="_blank" title="ATOM Feed"><span class="symbol">&#xe211;</span></a>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row comments">
-        <div class="span3">&nbsp;</div>
-        <div class="span6">
-        </div>
-    </div>
-</div>
-    </div>
-
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="span6">
-                    <p><strong>Eoin Brazil</strong> is a computer scientist, UX architect, technical services engineer (similar to SRE), author, teacher and data scientist. He has worked in various technical, leadership and educational roles within MongoDB Engineering. He currently works in the MongoDB Education team.</br></br>A range of his work can be found on <a href="https://github.com/braz">Github</a>. Information on his co-authored book <a href="https://mongodbbook.info">MongoDB: The Definitive Guide 3rd edition from O'Reilly</a>. You can find his <a href="https://slideshare.net/eoinbrazil">talks</a> online as well as his <a href="http://eoinbrazil.com/pdfs/vitae-eoinbrazil-feb-2019-dev.pdf">CV</a>.</p>
-                </div>
-                <div class="span4">
-                        <p><strong>Connect</strong></p>
-                        <ul class="socialLinks">
-                                <li><a href="http://www.twitter.com/eoinbrazil"><span class="symbol">&#xe086;</span> Twitter</a></li>
-                                <li><a href="http://ie.linkedin.com/in/eoinbrazil"><span class="symbol">&#xe052;</span> LinkedIn</a></li>
-                                <li><a href="https://foursquare.com/eoinbrazil"><span class="symbol">&#xe032;</span> Foursquare</a></li>
-                                <li><a href="http://www.github.com/braz"><span class="symbol">&#xe037;</span> GitHub</a></li>
-                                <li><a href="http://eoinbrazil.com/feeds/all.rss.xml"><span class="symbol">&#xe071;</span> RSS</a></li>
-                                <li><a href="http://eoinbrazil.com/feeds/all.atom.xml"><span class="symbol">&#xe011;</span> ATOM</a></li>
-                        </ul>
-                </div>
-        </div>
-            </div>
-    </div>
-
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="./theme/js/bootstrap.min.js"></script>
-</body>
-</html>
+<!doctype html><meta charset=utf-8><title>Insights</title><meta content=width=device-width,initial-scale=1.0 name=viewport><link href=http://eoinbrazil.com/theme/css/bootstrap.css media=screen rel=stylesheet><link href=http://eoinbrazil.com/theme/css/bootstrap-responsive.css media=screen rel=stylesheet><link href=http://eoinbrazil.com/theme/css/github.css media=screen rel=stylesheet><link href=http://eoinbrazil.com/theme/css/github-numbers.css media=screen rel=stylesheet><link href=http://eoinbrazil.com/theme/css/styles.css media=screen rel=stylesheet><link href=http://fonts.googleapis.com/css?family=Bitter:400,700 rel=stylesheet><link href=http://fonts.googleapis.com/css?family=Cantora+One rel=stylesheet><script type=speculationrules>
+        {
+          "prerender": [
+            {
+              "where": { "href_matches": "/*" },
+              "eagerness": "moderate"
+            }
+          ],
+          "prefetch": [
+            {
+              "where": { "not": { "href_matches": "/*" } },
+              "eagerness": "moderate"
+            }
+          ]
+        }
+    </script><link title="Insights Atom Feed" href=http://eoinbrazil.com/feeds/all.atom.xml rel=alternate type=application/atom+xml><link title="Insights RSS Feed" href=http://eoinbrazil.com/feeds/all.rss.xml rel=alternate type=application/rss+xml><script>var _gaq=_gaq||[];_gaq.push([`_setAccount`,`UA-45182755-1`]);_gaq.push([`_trackPageview`]);(()=>{let c=`script`;var a=document.createElement(c);a.type=`text/javascript`;a.async=!0;a.src=(`https:`==document.location.protocol?`https://ssl`:`http://www`)+ `.google-analytics.com/ga.js`;var b=document.getElementsByTagName(c)[0];b.parentNode.insertBefore(a,b)})()</script><link href=http://eoinbrazil.com/mongodb-book-landing-page.html rel=canonical><script type=application/ld+json>{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Insights", "item": "http://eoinbrazil.com"}, {"@type": "ListItem", "position": 2, "name": "Mongodb book landing page", "item": "http://eoinbrazil.com/mongodb-book-landing-page.html"}]}</script><script type=application/ld+json>{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "Eoin Brazil"}, "publisher": {"@type": "Organization", "name": "Insights"}, "headline": "Making a landing page for MongoDB The Definitive&nbsp;Guide", "about": "Blog/MongoDB", "datePublished": "2019-11-30 00:00"}</script><body><div class=miniBio><div class=container><a class=brand href=/ title=Insights><img src=http://eoinbrazil.com/img/avatar.png></a><span class=miniBioText>Creating ideas and insights.</span></div></div><div class=container><div class=container><div class=row><div class="span12 articleDetailHeadline"><h1>Making a landing page for MongoDB The Definitive Guide</h1><h2></h2></div></div></div><div class=container><div class="row articleDetail"><div class="span3 articleInfo light"><p><i class=icon-calendar></i> Sat 30 Nov 2019<p class=articleTags><i class=icon-tag></i> tags: <a href=http://eoinbrazil.com/tag/mongodb.html>mongodb</a> <a href=http://eoinbrazil.com/tag/writing.html>writing</a> <a href=http://eoinbrazil.com/tag/book.html>book</a> <a href=http://eoinbrazil.com/tag/website.html>website</a></div><div class="span6 articleDetailContent"><p>In advance of the book launch later in December I’ve been doing a little preparation. It turns out that Github is proving not just a useful location for the <a href=https://github.com/mongodb-the-definitive-guide-3e/>source code</a> but that it also is an excellent place to host the book’s <a href=https://mongodbbook.info/>website/landing page</a>.<p>I owe a lot of thanks to <a href=https://twitter.com/mhausenblas>Michael Hausenblas</a> and his own excellent book on <a href=https://programming-kubernetes.info/>Programming Kubernetes</a> which served as the inspiration and guide for my own landing page.<p>This used Github Pages and Jekyll with the <a href=https://github.com/orderedlist/minimal>‘minimal’ theme</a> by <a href=https://github.com/orderedlist>Steve Smith</a>. I also choose to use this approach for my landing page.<p>I turned to <a href=https://gandi.net>gandi.net</a> for my domain registration and in keeping with several other O’Reilly authors, I chose a <em>.info</em> domain. I decided on the short, simple, and available <a href=https://mongodbbook.info/>mongodbbook.info</a> domain name.<p>After adding the content to the landing page, including a soon to be active Twitter account at <a href=https://twitter.com/MongodbT>“MongodbT”</a>. I made some minor tweaks to the <a href=https://github.com/mongodb-the-definitive-guide-3e/mongodbbook.info/blob/master/_config.yml>_config.yml</a> file, specifically:<div class=highlight><pre><span></span><code><span class=nt>author</span><span class=p>:</span>
+<span class=w>  </span><span class=nt>twitter</span><span class=p>:</span><span class=w> </span><span class="l l-Scalar l-Scalar-Plain">eoinbrazil</span>
+<span class=nt>url</span><span class=p>:</span><span class=w> </span><span class=s>"https://mongodbbook.info/"</span>
+<span class=nt>plugins</span><span class=p>:</span>
+<span class=w>  </span><span class="p p-Indicator">-</span><span class=w> </span><span class="l l-Scalar l-Scalar-Plain">jekyll-sitemap</span>
+<span class=w>  </span><span class="p p-Indicator">-</span><span class=w> </span><span class="l l-Scalar l-Scalar-Plain">jekyll-feed</span>
+</code></pre></div><p>This minor additions allow for attribution to my twitter handle as well as providing a <a href=https://mongodbbook.info/sitemap.xml>sitemap xml file</a> and a <a href=https://mongodbbook.info/feed.xml>atom feed file</a>. The Sitemap file allowed me to submit it to Bing, Google, and Yandex to allow it to be crawled a little sooner than if left to the automated crawler searches.</div></div></div><div class=container><div class=span3>Related Posts</div><div class=span6><ul><li><a href=http://eoinbrazil.com/mongodb-book-available.html>MongoDB The Definitive Guide 3rd Edition Available</a><li><a href=http://eoinbrazil.com/mongodb-book.html>Co-authoring MongoDB: The Definitive Guide, 3rd Edition</a><li><a href=http://eoinbrazil.com/mongodb-introduction-to-modern-databases.html>Introduction to Modern Databases</a><li><a href=http://eoinbrazil.com/datapipelineswithpythonandmongodb.html>Data Pipelines with Python and MongoDB</a></ul></div></div></div><div class=container><div class=span3></div><div class=span6>Previous [ <a href=http://eoinbrazil.com/mongodb-book.html> Co-authoring MongoDB: The Definitive Guide, 3rd Edition </a> ] <br> Next [ <a href=http://eoinbrazil.com/mongodb-book-available.html> MongoDB The Definitive Guide 3rd Edition Available </a> ]</div></div><div class=container><div class=span3> </div><div class=span6 id=post-share-links>Share via: <a title="Share on Twitter" href=https://twitter.com/intent/tweet?text=Making%20a%20landing%20page%20for%20MongoDB%20The%20Definitive%C2%A0Guide&url=http%3A//eoinbrazil.com/mongodb-book-landing-page.html&via=eoinbrazil&hashtags=mongodb,writing,book,website target=_blank><span class=symbol></span></a><a title="Share on Facebook" href=https://www.facebook.com/sharer/sharer.php?u=http%3A//eoinbrazil.com/mongodb-book-landing-page.html target=_blank><span class=symbol></span></a><a title="Share on LinkedIn" href=https://www.linkedin.com/shareArticle?mini=true&url=http%3A//eoinbrazil.com/mongodb-book-landing-page.html&title=Making%20a%20landing%20page%20for%20MongoDB%20The%20Definitive%C2%A0Guide&summary=In%20advance%20of%20the%20book%20launch%20later%20in%20December%20I%E2%80%99ve%20been%20doing%20a%20little%20preparation.%20It%20turns%20out%20that%20Github%20is%20proving%20not%20just%20a%20useful%20location%20for%20the%20source%20code%20but%20that%20it%20also%20is%20an%20excellent%20place%20to%20host%20the%20book%E2%80%99s%20website/landing%20page.%0AI%20owe%20%E2%80%A6&source=http%3A//eoinbrazil.com/mongodb-book-landing-page.html target=_blank><span class=symbol></span></a><a title="Share on Google Plus" href target=_blank><span class=symbol></span></a><a title="Share via Email" href=mailto:?subject=Making%20a%20landing%20page%20for%20MongoDB%20The%20Definitive%C2%A0Guide&body=http%3A//eoinbrazil.com/mongodb-book-landing-page.html target=_blank><span class=symbol></span></a> Feed Subscription via: <a title="RSS Feed" href=http://eoinbrazil.com/feeds/all.rss.xml target=_blank><span class=symbol></span></a><a title="ATOM Feed" href=http://eoinbrazil.com/feeds/all.atom.xml target=_blank><span class=symbol></span></a></div></div><div class=container><div class="row comments"><div class=span3> </div><div class=span6></div></div></div><div class=footer><div class=container><div class=row><div class=span6><p><strong>Eoin Brazil</strong> is a computer scientist, UX architect, technical services engineer (similar to SRE), author, teacher and data scientist. He has worked in various technical, leadership and educational roles within MongoDB Engineering. He currently works in the MongoDB Education team.A range of his work can be found on <a href=https://github.com/braz>Github</a>. Information on his co-authored book <a href=https://mongodbbook.info>MongoDB: The Definitive Guide 3rd edition from O'Reilly</a>. You can find his <a href=https://slideshare.net/eoinbrazil>talks</a> online as well as his <a href=http://eoinbrazil.com/pdfs/vitae-eoinbrazil-feb-2019-dev.pdf>CV</a>.</div><div class=span4><p><strong>Connect</strong><ul class=socialLinks><li><a href=http://www.twitter.com/eoinbrazil><span class=symbol></span> Twitter</a><li><a href=http://ie.linkedin.com/in/eoinbrazil><span class=symbol></span> LinkedIn</a><li><a href=https://foursquare.com/eoinbrazil><span class=symbol></span> Foursquare</a><li><a href=http://www.github.com/braz><span class=symbol></span> GitHub</a><li><a href=http://eoinbrazil.com/feeds/all.rss.xml><span class=symbol></span> RSS</a><li><a href=http://eoinbrazil.com/feeds/all.atom.xml><span class=symbol></span> ATOM</a></ul></div></div></div></div><script src=http://code.jquery.com/jquery.js></script><script src=http://eoinbrazil.com/theme/js/bootstrap.min.js></script>
